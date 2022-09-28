@@ -1,0 +1,80 @@
+.container {
+    width: auto;
+    height: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.top {
+    width: inherit;
+    height: 100px;
+    margin: 0 auto;
+}
+.nav-bar {
+    width: inherit;
+    height: inherit;
+    background-color: rgb(16, 130, 130);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.main {
+    width: inherit;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.text-box{
+    width: inherit;
+    height: 100px;
+
+}
+.black-box {
+    width: inherit;
+    height: 400px;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: row;
+}
+.left-keys {
+    width: 350px;
+    height: inherit;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 2;
+}
+.right-keys {
+    width: 500px;
+    height: inherit;
+    margin-left: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    z-index: 2;
+}
+.black-keys {
+    width: 150px;
+    height: 200px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+.white-box{
+    width: inherit;
+    height: 400px;
+    margin-top: -150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 1;
+}
+.white-keys {
+    width: 170px;
+    height: 200px;
+    border-radius: 25px;
+    border: solid 1px black;
+}
