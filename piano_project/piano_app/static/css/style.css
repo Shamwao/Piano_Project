@@ -23,15 +23,11 @@
     height: 700px;
     display: flex;
     flex-direction: column;
-}
-.text-box{
-    width: inherit;
-    height: 100px;
 
 }
 .black-box {
     width: inherit;
-    height: 400px;
+    height: 250px;
     margin-bottom: 80px;
     display: flex;
     flex-direction: row;
@@ -60,21 +56,34 @@
     width: 150px;
     height: 200px;
     background-color: black;
-    border: 1px solid black;
     border-radius: 25px;
 }
 .white-box{
     width: inherit;
-    height: 400px;
+    height: 250px;
     margin-top: -150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
+
 }
 .white-keys {
     width: 170px;
     height: 200px;
     border-radius: 25px;
     border: solid 1px black;
+}
+.answer-box{
+    width: inherit;
+    height: 200px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.useranswer{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
 }

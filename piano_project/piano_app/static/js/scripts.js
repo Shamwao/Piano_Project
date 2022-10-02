@@ -16,7 +16,7 @@ $(document).ready(function(){
     })
 })
 
-//audio
+//audio playback
 
 $(document).ready(function(){
     $(document).mousedown(function(event){
@@ -32,19 +32,3 @@ function audioFade(){
     setInterval(audio.volume()-.3, 100)
 }
 
-//tutorial/keys
-
-//tutorial/chords
-
-//tutorial/scales
-
-
-
-//quiz/keys
-// hightlight random key, if correct button is selected, score +10 
-//if score == 100 "You passed! Yahoo!" else "Keep practicing, you got this!"
-
-//quiz/chords
-//define chords (embedded arrays?) highlight, score, etc
-
-//quiz/scales
