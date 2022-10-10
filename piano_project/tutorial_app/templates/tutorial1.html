@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Your Keys</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <nav class="navbar navbar-expand-lg"style="background-color: #e3f2fd;">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="/dashboard"><h1>Piano Parrot</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/profile">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/tutorial/keys">Tutorials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/quiz/keys">Quizzes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/logout">Logout</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        <div class="main">
+            <div class="text-box"></div>
+            <h2 class="text-center">All keys have letter names. Let's start by learning the <strong>white keys!</strong></h2>
+            <div class="black-box">
+                <div class="left-keys">
+                    <div class="black-keys" id="Db4"></div>
+                    <div class="black-keys" id="Eb4"></div>
+                </div>
+                <div class="right-keys">
+                    <div class="black-keys" id="Gb4"></div>
+                    <div class="black-keys" id="Ab4"></div>
+                    <div class="black-keys" id="Bb4"></div>
+                </div>
+            </div>
+            <div class="white-box">
+                <div class="white-keys" id="C4"></div>
+                <div class="white-keys" id="D4" onclick="revealD()"><h2></h2></div>
+                <div class="white-keys" id="E4"></div>
+                <div class="white-keys" id="F4"></div>
+                <div class="white-keys" id="G4"></div>
+                <div class="white-keys" id="A4"></div>
+                <div class="white-keys" id="B4"></div>
+                <div class="white-keys" id="C5"></div>
+            </div>
+            <div>
+                <h2 class="text-center">Think of the black keys groups as two houses.<br>
+                    See the smaller house? That's where the dog lives.<br>
+                    Click the white key where he lives!</h2>
+                    <div class="btn-next"><a class="btn btn-primary" href="2" role="button">></a></div>
+            </div>
+        </div>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'js/scripts_t.js'%}"></script>
+</body>
+</html>

@@ -11,6 +11,7 @@
 const testKeys = ["A","B","C","D","E","F","G"]
 const answerKeys = document.getElementsByClassName('white-keys')
 let score = 0
+let bestScore = 0
 let questionsAnswered = 0
 
 function poseQuestion(){
@@ -57,6 +58,7 @@ function checkAnswer(id){
     if (questionsAnswered == 10){
         alert("Your final score is " + score+ msg)
         clean()
+        score = bestScore
     }
 }
 
@@ -67,8 +69,12 @@ function hide(element){
 function clean() {
     for (var i = 0; i < answerKeys.length; i++)
         answerKeys[i].style.backgroundColor = 'white'
+        console.log('squeaky!')
 }
 
+function finalScore(){
+
+}
 
 
 

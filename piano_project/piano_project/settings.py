@@ -37,7 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'piano_app'
+    'piano_app',
+    'tutorial_app',
+    'quiz_app',
+    'profile_app',
 ]
 
 MIDDLEWARE = [
@@ -76,8 +79,12 @@ WSGI_APPLICATION = 'piano_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'piano_parrot',
+        'USER': 'root',
+        'PASSWORD' : 'root',
+        'HOST' : '',
+        'PORT': ''
     }
 }
 

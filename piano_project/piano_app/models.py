@@ -1,11 +1,40 @@
+from email.policy import default
 from django.db import models
+import re
+EMAIL_REGEX =re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
 
 # Create your models here.
 
-class User:
-    def __init__(self, data):
-        self.f_name=data['f_name']
-        self.l_name=data['l_name']
-        self.email = data['email']
-        self.password = data['password']
+class UserManager(models.Manager):
+    def validator(self, form):
+        errors = {}
+        emailCheck = self.filter(email=form['email'])
+        if emailCheck:
+            errors['email'] = 'That email is already in use'
+        if len(form['first_name']) < 3 :
+            errors["first_name"] = "Enter first name"
+        if len(form['last_name']) < 3 :
+            errors["last_name"] = "Enter last name"
+        if len(form['password']) < 8 :
+            errors["password"] = 'Password must be at least 8 characters'
+        if not EMAIL_REGEX.match(form['email']):
+            errors["email"] = "Enter valid email address"
+        if form['password'] != form ['confirm'] :
+            errors['confirm'] = "Passwords don't match"
         
+        return errors
+
+class User(models.Model):
+    first_name=models.CharField(max_length=200)
+    last_name=models.CharField(max_length=200)
+    email = models.EmailField()
+    password = models.CharField(max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    objects= UserManager()
+
+class Quiz(models.Model):
+    score=models.IntegerField(default=0)
+    passed=models.BooleanField(default=False)
+    user = models.ForeignKey(User, related_name ="best_score", on_delete =models.CASCADE)
+    
