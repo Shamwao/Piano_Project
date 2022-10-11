@@ -49,14 +49,15 @@ function checkAnswer(id){
         msg = ". Keep training."
     }
     if (questionsAnswered == 10){
-        alert("Your final score is " + score+ msg)
-        getElementById('finalScore').value = score
+        finalScore = score
+        alert("Your final score is " + finalScore+ msg)
+        getElementById('finalScore').value = finalScore
         console.log(score)
-        if (finalScore < 100){
-            passed = false
+        if (finalScore == 100){
+            passed = true
         }
         else {
-            passed = true
+            passed = false
         }
         getElementById('passed').value = passed
         console.log(passed)

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Your Keys</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style_l.css'%}">
 </head>
 <body>
     <div class="container">
@@ -29,9 +29,6 @@
                         <a class="nav-link active" href="/quiz/keys">Quizzes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/lessons">Schedule a Lesson</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link active" href="/logout">Logout</a>
                     </li>
                     </ul>
@@ -39,25 +36,15 @@
                 </div>
             </nav>
         </div>
-        <h1 class="text-center">{{user.first_name}}'s Profile</h1>
+        <h1 class="text-center">Schedule a lesson! </h1>
         <div class="field d-flex justify-content-center">
             <div class="main-box">
-                <table class="table table-striped-columns">
-                    <h3>Lessons Scheduled</h3>
-                    <tr>
-                        <th>Date</th>
-                        <th>Time</th>
-                        <th>Commands</th>
-                    </tr>
-                    <tr>
-                        {% for lesson in lessons %}
-                        <td> {{lesson.date}} </td>
-                        <td> {{lesson.time}}</td>
-                        <td> <a href="update/{{lesson.id}}">Update</a> <a href="delete/{{lesson.id}}">Delete</a></td>
-                    </tr>
-                        {% endfor %}
-                    
-                </table>
+                <form action="create_lesson" method="post">
+                    {% csrf_token%}
+                    <input type="date" name ='date'>
+                    <input type="time" name='time'>
+                    <input type="submit" value="Schedule" class="btn btn-success">
+                </form>
             </div>
         </div>
     </div>

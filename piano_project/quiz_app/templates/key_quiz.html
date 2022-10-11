@@ -76,12 +76,12 @@
                 <button class="useranswer" id="F" onclick="clean()">F</button>
                 <button class="useranswer" id="G" onclick="clean()">G</button>
             </div>
-            <form action="post_score" method="post">
+            <!-- <form action="/quiz/keys/score/" method="post">
                 {% csrf_token %}
-                <input type="hidden" name ="finalScore" id="finalScore">
-                <input type="hidden" name ="passed" id ="passed">
+                <input type="hidden" name ="finalScore" value ="" id="finalScore">
+                <input type="hidden" name ="passed" value = "" id ="passed">
             <button class ="btn btn-primary btn-sm" type="submit">Finish Quiz</button>
-            </form>
+            </form> -->
         </div>
     </div>
     <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>

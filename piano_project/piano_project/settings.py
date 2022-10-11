@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'tutorial_app',
     'quiz_app',
     'profile_app',
+    'lessons_app',
 ]
 
 MIDDLEWARE = [

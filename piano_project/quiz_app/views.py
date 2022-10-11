@@ -6,6 +6,8 @@ def key_quiz(request):
     return render (request, "key_quiz.html")
 
 def post_score(request):
+    print('GOT HERE========================')
     if request.method == 'POST':
-        Quiz.objects.create(score =request.POST.get('score'), passed= request.POST.get('passed'))
+        print (request.POST.get('finalScore'))
+        # Quiz.objects.create(score =request.POST.get('finalScore'), passed= request.POST.get('passed'))
         return redirect(request, '/dashboard')
