@@ -29,6 +29,9 @@
                         <a class="nav-link active" href="/quiz/keys">Quizzes</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active" href="/lessons">Schedule a Lesson</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active" href="/logout">Logout</a>
                     </li>
                     </ul>
@@ -38,9 +41,10 @@
         </div>
     </div>     
         <h1 class="text-center">Welcome {{user.first_name}}!</h1>
-    <div><h1><a>Tutorials</a></h1> <h2>Learn the basics of piano!</h2></div>
-    <div><h1><a>Quizzes</a></h1> <h2>Test Your Knowledge!</h2></div>
-    <div><h1><a>My Profile</a></h1> <h2>Track your stats!</h2></div>
+    <div><h2 class="text-center"><a href="/tutorial/keys">Tutorials </a>Learn the basics of piano!</h2></div>
+    <div><h2 class="text-center"><a href="/quiz/keys">Quizzes </a>Test Your Knowledge!</h2></div>
+    <div><h2 class="text-center"><a href="/profile">My Profile </a>Track your stats!</h2></div>
+    <div><h2 class="text-center"><a href="/lessons">Lessons </a>Schedule a Lesson!</h2></div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>

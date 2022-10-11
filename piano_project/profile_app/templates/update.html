@@ -43,7 +43,7 @@
         <h1 class="text-center">Update lesson </h1>
         <div class="field d-flex justify-content-center">
             <div class="main-box">
-                <form action="update_lesson" method="post">
+                <form action="update_lesson/{{mylesson.id}}" method="post">
                     {% csrf_token%}
                     <input type="date" name ='date'>
                     <input type="time" name='time'>

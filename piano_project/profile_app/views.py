@@ -11,17 +11,21 @@ def profile(request):
     }
     return render(request, "profile.html", context)
 
-def update(request):
-    return render(request, 'update.html')
+def update(request, id):
+    mylesson =Lesson.objects.get(id=id)
+    context = {
+        'mylesson': mylesson
+    }
+    return render(request, 'update.html', context)
 
-def update_lesson(request, lesson_id):
-    update_this = Lesson.objects.get(id=lesson_id)
+def update_lesson(request, id):
+    update_this = Lesson.objects.get(id=id)
     update_this.date = request.POST['date']
     update_this.time = request.POST['time']
     update_this.save()
     return redirect('/profile')
 
-def delete(request, lesson_id):
-    deleted_lesson = Lesson.objects.get(id=lesson_id)
+def delete(request, id):
+    deleted_lesson = Lesson.objects.get(id=id)
     deleted_lesson.delete()
     return redirect(request, '/profile')
