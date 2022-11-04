@@ -2,6 +2,7 @@
 
 const testKeys = ["A","B","C","D","E","F","G"]
 const answerKeys = document.getElementsByClassName('white-keys')
+// const answerKeys = querySelectorAll('.white-keys', '.black-keys')
 let score = 0
 let finalScore= 0
 let passed = false
@@ -51,7 +52,7 @@ function checkAnswer(id){
     if (questionsAnswered == 10){
         finalScore = score
         alert("Your final score is " + finalScore+ msg)
-        getElementById('finalScore').value = finalScore
+        document.getElementById('finalScore').value = finalScore
         console.log(score)
         if (finalScore == 100){
             passed = true
@@ -59,7 +60,7 @@ function checkAnswer(id){
         else {
             passed = false
         }
-        getElementById('passed').value = passed
+        document.getElementById('passed').value = passed
         console.log(passed)
         clean()
     }
