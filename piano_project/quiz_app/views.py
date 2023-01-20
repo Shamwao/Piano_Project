@@ -11,5 +11,7 @@ def post_score(request):
     print('GOT HERE========================')
     if request.method == 'POST':
         print (request.POST.get('finalScore'))
-        Quiz.objects.create(score =request.POST.get('finalScore'), passed= True if request.POST.get('passed')=='true' else False)
-        return redirect(request, '/dashboard')
+        Quiz.objects.create(score =request.POST.get('finalScore'), 
+        passed= True if request.POST.get('passed')=='true' else False,
+        user= User.objects.get(id = request.session['user_id']))
+        return redirect('/profile')

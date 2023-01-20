@@ -36,7 +36,7 @@ class User(models.Model):
 class Quiz(models.Model):
     score=models.IntegerField(default=0)
     passed=models.BooleanField(default=False)
-    user = models.ForeignKey(User, related_name ="best_score", on_delete =models.CASCADE)
+    user = models.ForeignKey(User, related_name ="user_id", on_delete =models.CASCADE)
 
 class Lesson(models.Model):
     date=models.DateField()
