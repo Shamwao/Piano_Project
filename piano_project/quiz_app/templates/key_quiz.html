@@ -74,9 +74,10 @@
             </div>
             <form action="/quiz/keys/score/" method="post">
                 {% csrf_token %}
+                <input type="hidden" name ="user_id" value ="{{user.id}}" id="user_id">
                 <input type="hidden" name ="finalScore" value ="" id="finalScore">
                 <input type="hidden" name ="passed" value = "" id ="passed">
-            <button class ="btn btn-primary btn-sm" type="submit">Finish Quiz</button>
+                <button hidden class ="btn btn-primary btn-lg" id="complete" type="submit">Finish Quiz</button>
             </form>
         </div>
     </div>

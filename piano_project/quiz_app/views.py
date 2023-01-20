@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
-from piano_app.models import Quiz
+from piano_app.models import Quiz, User
 
 # Create your views here.
 def key_quiz(request):
-    return render (request, "key_quiz.html")
+    user = User.objects.get(id=request.session['user_id'])
+    context = {'user': user}
+    return render (request, "key_quiz.html", context)
 
 def post_score(request):
     print('GOT HERE========================')
     if request.method == 'POST':
         print (request.POST.get('finalScore'))
-        # Quiz.objects.create(score =request.POST.get('finalScore'), passed= request.POST.get('passed'))
+        Quiz.objects.create(score =request.POST.get('finalScore'), passed= True if request.POST.get('passed')=='true' else False)
         return redirect(request, '/dashboard')

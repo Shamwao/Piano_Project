@@ -7,6 +7,7 @@ let score = 0
 let finalScore= 0
 let passed = false
 let questionsAnswered = 0
+let quizComplete = false
 
 function poseQuestion(){
     let random = Math.floor(Math.random()*testKeys.length)
@@ -50,6 +51,7 @@ function checkAnswer(id){
         msg = ". Keep training."
     }
     if (questionsAnswered == 10){
+        quizComplete = true
         finalScore = score
         alert("Your final score is " + finalScore+ msg)
         document.getElementById('finalScore').value = finalScore
@@ -63,6 +65,7 @@ function checkAnswer(id){
         document.getElementById('passed').value = passed
         console.log(passed)
         clean()
+        document.getElementById('complete').removeAttribute('hidden')
     }
 }
 
