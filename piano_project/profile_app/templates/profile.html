@@ -56,7 +56,19 @@
                         <td> <a href="update/{{lesson.id}}">Update</a> <a href="delete/{{lesson.id}}">Delete</a></td>
                     </tr>
                         {% endfor %}
-                    
+                </table>
+                <table class="table table-striped-columns">
+                    <h3>Quiz Results</h3>
+                    <tr>
+                        <th>Quiz</th>
+                        <th>Score</th>
+                        <th>Passed</th>
+                    </tr>
+                    <tr>
+                        <td> </td>
+                        <td> {{quiz.finalScore}}</td>
+                        <td></td>
+                    </tr>
                 </table>
             </div>
         </div>
