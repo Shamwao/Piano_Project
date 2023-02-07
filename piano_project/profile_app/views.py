@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
-from piano_app.models import User, Lesson
+from piano_app.models import User, Lesson, Quiz
 
 # Create your views here.
 
 def profile(request):
     user = User.objects.get(id=request.session['user_id'])
+    quiz = Quiz.objects.get(id=request.session['user_id'])
     context = {
         'user': user,
-        'lessons': Lesson.objects.all().values()
+        'lessons': Lesson.objects.all().values(),
+        'quiz' : quiz
     }
     return render(request, "profile.html", context)
 
