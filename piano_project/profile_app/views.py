@@ -5,11 +5,11 @@ from piano_app.models import User, Lesson, Quiz
 
 def profile(request):
     user = User.objects.get(id=request.session['user_id'])
-    quiz = Quiz.objects.get(id=request.session['user_id'])
+    quiz = Quiz.objects.get(user_id=request.session['user_id'])
     context = {
         'user': user,
         'lessons': Lesson.objects.all().values(),
-        'quiz' : quiz
+        'quiz': quiz
     }
     return render(request, "profile.html", context)
 
@@ -27,7 +27,7 @@ def update_lesson(request, id):
     update_this.save()
     return redirect('/profile')
 
-def delete(request, id):
+def delete(id):
     deleted_lesson = Lesson.objects.get(id=id)
     deleted_lesson.delete()
     return redirect('/profile')
