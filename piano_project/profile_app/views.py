@@ -30,4 +30,4 @@ def update_lesson(request, id):
 def delete(request, id):
     deleted_lesson = Lesson.objects.get(id=id)
     deleted_lesson.delete()
-    return redirect(request, '/profile')
+    return redirect('/profile')

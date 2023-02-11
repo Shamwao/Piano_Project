@@ -12,4 +12,4 @@ def create_lesson(request):
     time=request.POST.get('time'),
     user = User.objects.get(id = request.session['user_id'])
     )
-    return redirect(request, '/profile')
+    return redirect('/profile')
