@@ -23,7 +23,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='quiz',
             name='user',
-            field=models.ForeignKey(default='', on_delete=django.db.models.deletion.RESTRICT, related_name='best_score', to='piano_app.user'),
+            field=models.ForeignKey(default='', on_delete=django.db.models.deletion.CASCADE, related_name='best_score', to='piano_app.user'),
             preserve_default=False,
         ),
         migrations.AlterField(

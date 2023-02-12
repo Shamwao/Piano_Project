@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('keys/score/', views.post_score),
     path('keys/', views.key_quiz),
+    path('bkeys/', views.bkeys),
 ]

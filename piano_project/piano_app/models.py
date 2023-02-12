@@ -27,16 +27,17 @@ class UserManager(models.Manager):
 class User(models.Model):
     first_name=models.CharField(max_length=200)
     last_name=models.CharField(max_length=200)
-    email = models.EmailField()
-    password = models.CharField(max_length=255)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    email =models.EmailField()
+    password =models.CharField(max_length=255)
+    created_at =models.DateTimeField(auto_now_add=True)
+    updated_at =models.DateTimeField(auto_now=True)
     objects= UserManager()
 
 class Quiz(models.Model):
+    name=models.CharField(max_length=80, default='quizname')
     score=models.IntegerField(default=0)
     passed=models.BooleanField(default=False)
-    user = models.ForeignKey(User, related_name ="user_id", on_delete =models.CASCADE)
+    user=models.ForeignKey(User, related_name ="user_id", on_delete =models.CASCADE)
 
 class Lesson(models.Model):
     date=models.DateField()

@@ -65,12 +65,12 @@
                         <th>Passed</th>
                     </tr>
                     <tr>
-                        <td></td>
-                    
+                        {% for quiz in quizzes%}
+                        <td>{{quiz.name}}</td>
                         <td>{{quiz.score}} </td>
-                        
                         <td></td>
                     </tr>
+                    {%endfor%}
                 </table>
             </div>
         </div>
