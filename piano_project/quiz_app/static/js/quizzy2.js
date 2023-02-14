@@ -75,7 +75,7 @@ function hide(element){
 
 function clean() {
     for (var i = 0; i < answerKeys.length; i++)
-        answerKeys[i].style.backgroundColor = 'white'
+        answerKeys[i].style.backgroundColor = 'black'
 }
 
 
