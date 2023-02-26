@@ -8,7 +8,8 @@ def lessons(request):
 def create_lesson(request):
     if request.method == 'GET':
         return redirect('/lessons')  
-    Lesson.objects.create(date=request.POST.get('date'), 
+    Lesson.objects.create(
+    date=request.POST.get('date'), 
     time=request.POST.get('time'),
     user = User.objects.get(id = request.session['user_id'])
     )
