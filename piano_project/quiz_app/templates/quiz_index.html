@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Your Keys</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style_l.css'%}">
+    <link rel="stylesheet" href="{% static 'css/style_dash.css'%}">
 </head>
 <body>
     <div class="container">
@@ -19,36 +19,34 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/profile">My Profile</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/tutorial/keys">Tutorials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/quiz/main">Quizzes</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/lessons">Schedule a Lesson</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="/logout">Logout</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/profile">My Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/tutorial/keys">Tutorials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/quiz/keys">Quizzes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/lessons">Schedule a Lesson</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/logout">Logout</a>
+                    </li>
                     </ul>
                 </div>
                 </div>
             </nav>
         </div>
-        <h1 class="text-center">Schedule a lesson! </h1>
-        <div class="field d-flex justify-content-center">
-            <div class="main-box">
-                <form action="create_lesson" method="post">
-                    {% csrf_token%}
-                    <input type="date" name ='date'>
-                    <input type="time" name='time'>
-                    <input type="submit" value="Schedule" class="btn btn-success">
-                </form>
-            </div>
+    </div>     
+        <h1 class="text-center">Quizzes</h1>
+    <div class="center">
+        <div class="links">
+            <div><h2 class="text-center"><a href="/quiz/keys">White Keys:</a>Start Here!</h2></div>
+            <div><h2 class="text-center"><a href="/quiz/bkeys">Black Keys:</a>Test Your Knowledge!</h2></div>
+            <div><h2 class="text-center"><a href="#">All Keys</a></h2></div>
+            <div><h2 class="text-center"><a href="#">Basic Chords:</a></h2></div>
         </div>
     </div>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">

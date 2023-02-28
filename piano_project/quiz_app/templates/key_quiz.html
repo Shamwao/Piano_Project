@@ -18,18 +18,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/profile">My Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/tutorial/keys">Tutorials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/quiz/keys">Quizzes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="/logout">Logout</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="/profile">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/tutorial/keys">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/quiz/main">Quizzes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/lessons">Schedule a Lesson</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/logout">Logout</a>
+                        </li>
                     </ul>
                     </form>
                 </div>
@@ -77,7 +80,7 @@
                 <input hidden name ="name" value ="White Keys">
                 <input hidden name ="finalScore" value ="{{quiz.score}}" id="finalScore">
                 <input hidden name ="passed" value = "" id ="passed">
-                <input hidden name ="user_id" value ="{{user.id}}" id="user_id">
+                 <input hidden name ="user_id" value ="{{user.id}}" id="user_id">
                 <button hidden class ="btn btn-primary btn-lg" id="complete" type="submit">Finish Quiz</button>
             </form>
         </div>

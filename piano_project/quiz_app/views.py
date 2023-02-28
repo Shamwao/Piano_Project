@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect
 from piano_app.models import Quiz, User
 
 # Create your views here.
+def quiz_index(request):
+    return render (request, "quiz_index.html")
+
 def key_quiz(request):
     user = User.objects.get(id=request.session['user_id'])
     context = {'user': user}
