@@ -47,6 +47,7 @@
     justify-content: space-around;
     align-items: flex-end;
     z-index: 2;
+    position: relative;
 }
 .right-keys {
     width: 500px;
@@ -57,6 +58,7 @@
     justify-content: space-around;
     align-items: flex-end;
     z-index: 2;
+    position: relative;
 }
 .black-keys {
     width: 150px;
@@ -100,4 +102,11 @@
     width: inherit;
     display: flex;
     justify-content: flex-end;
+}
+#doghouse{
+    position: absolute;
+}
+#bungalow{
+    position: absolute;
+    width: 220px;
 }
