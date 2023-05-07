@@ -26,7 +26,7 @@ SECRET_KEY=config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['piano-parrot-env.eba-zpumskm2.us-west-2.elasticbeanstalk.com',
+ALLOWED_HOSTS = ['pianoparrot.eba-de2mxavf.us-west-2.elasticbeanstalk.com',
                 'localhost'
                 ]
 

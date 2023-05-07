@@ -1,6 +1,9 @@
 from django.shortcuts import render, redirect
 
 # Create your views here.
+def tutorial_index(request):
+    return render (request, "tutorial_index.html")
+    
 def keys_tutorial(request):
     return render (request, "tutorial.html")
 
