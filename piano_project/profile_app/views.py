@@ -27,7 +27,7 @@ def update_lesson(request, id):
     update_this.save()
     return redirect('/profile')
 
-def delete(id):
+def delete(request, id):
     deleted_lesson = Lesson.objects.get(id=id)
     deleted_lesson.delete()
     return redirect('/profile')
