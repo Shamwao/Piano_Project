@@ -4,7 +4,7 @@ from piano_app.models import User, Lesson, Quiz
 # Create your views here.
 
 def profile(request):
-    user = User.objects.get(id=request.session['user_id'])
+    user = User.objects.get(id=request.session['user.id'])
     # quiz = Quiz.objects.get(user_id=request.session['user_id'])
     context = {
         'user': user,

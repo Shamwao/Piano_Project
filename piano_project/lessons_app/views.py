@@ -11,6 +11,6 @@ def create_lesson(request):
     Lesson.objects.create(
     date=request.POST.get('date'), 
     time=request.POST.get('time'),
-    user = User.objects.get(id = request.session['user_id'])
+    user = User.objects.get(id = request.session['user.id'])
     )
     return redirect('/profile')

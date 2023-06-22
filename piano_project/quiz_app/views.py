@@ -6,12 +6,12 @@ def quiz_index(request):
     return render (request, "quiz_index.html")
 
 def key_quiz(request):
-    user = User.objects.get(id=request.session['user_id'])
+    user = User.objects.get(id=request.session['user.id'])
     context = {'user': user}
     return render (request, "key_quiz.html", context)
 
 def bkeys(request):
-    user = User.objects.get(id=request.session['user_id'])
+    user = User.objects.get(id=request.session['user.id'])
     context = {'user': user}
     return render (request, "bkey_quiz.html", context)
 
