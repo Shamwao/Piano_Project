@@ -94,16 +94,17 @@ if 'RDS_HOSTNAME' in os.environ:
             'PORT': os.environ['RDS_PORT'],
         }
     }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'piano_parrot',
-#         'USER': 'root',
-#         'PASSWORD' : 'root',
-#         'HOST' : '',
-#         'PORT': ''
-#     }
-# }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'piano_parrot',
+            'USER': 'root',
+            'PASSWORD' : 'root',
+            'HOST' : '',
+            'PORT': ''
+        }
+    }
 
 
 # Password validation
