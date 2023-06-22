@@ -29,7 +29,7 @@ def create_user(request):
     return redirect ('/dashboard')
 
 def dashboard(request):
-    user = User.objects.get(id=request.session['user_id'])
+    user = User.objects.get(id=request.session['user.id'])
     context = {'user': user}
     return render(request, "dashboard.html", context)
 
