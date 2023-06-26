@@ -9,39 +9,41 @@
 </head>
 <body>
     <h1 class= "text-center" >Welcome to Piano Parrot!</h1>
-    <div class="text-center">
-        {% if messages %}
-            <ul class="messages">    
-                {% for message in messages %}    
-                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
     <div class = "d-flex justify-content-around"> 
         <form action ="create_user" method="post" class="col-4 bg-dark p-4 my-5 text-light">
             <h3>Not a member? Register here!</h3>
+            {% if messages %}
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }} list-group-item text-danger"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        {% endif %}
             {% csrf_token %}
-            <label for="first_name">First Name:</label>
-            <input type="text" class="form-control" name = "first_name">
-            <label for="last_name">Last Name:</label>
-            <input type="text" class="form-control" name="last_name">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" name="email">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" name="password">
-            <label for="confirm">Confirm Password:</label>
-            <input type="password" class="form-control" name="confirm">
-            <input type="submit" value="Register" class="btn btn-success">
+            {% if messages %}
+            {% for message in messages %}    
+                <li {% if message.tags %} class="{{ message.tags }} list-group-item text-danger"{% endif %}>{{ message }}</li>    
+            {% endfor %}
+        {% endif %}
+            <input type="text" class="form-control mt-3" name = "first_name" placeholder="First Name">
+            <input type="text" class="form-control mt-3" name="last_name" placeholder="Last Name">
+            <input type="email" class="form-control mt-3" name="email" placeholder="Email Address">
+            <input type="password" class="form-control mt-3" name="password" placeholder="Password">
+            <input type="password" class="form-control mt-3" name="confirm" placeholder="Confirm Password">
+            <input type="submit" value="Register" class="btn btn-success mt-3">
         </form>
         <form action="login" method="post" class="col-4 bg-dark p-2 h-25 my-5 text-light">
             <h3>Already a member? Log in here!</h3>
             {% csrf_token%}
-            <label for="email">Email:</label>
-            <input type="email" name ="email" class="form-control">
-            <label for="password">Password:</label>
-            <input type="password" name ="password" class="form-control">
-            <input type="submit" value="Login" class="btn btn-success">
+            <input type="email" name ="email" class="form-control mt-3" placeholder="Email Address">
+            <input type="password" name ="password" class="form-control mt-3" placeholder="Password">
+            <input type="submit" value="Login" class="btn btn-success mt-3">
         </form>
+    </div>
+    <div class="text-center">
+
+            <ul class="messages list-group">    
+                
+            </ul>
+
+    </div>
 </body>
 </html>
