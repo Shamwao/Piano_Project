@@ -25,7 +25,7 @@ def create_user(request):
             email = request.POST.get('email'),
             password =  hashedPw
             )
-    request.session['user.id']  = new_user.id
+    request.session['user_id']  = new_user.id
     return redirect ('/dashboard')
 
 def dashboard(request):
