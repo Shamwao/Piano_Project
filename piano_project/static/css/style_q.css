@@ -37,11 +37,12 @@
     margin-bottom: 80px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .left-keys {
     width: 350px;
     height: inherit;
-    margin-left: 40px;
+    margin-right: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -50,8 +51,8 @@
 }
 .right-keys {
     width: 500px;
+    margin-right: 160px;
     height: inherit;
-    margin-left: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
