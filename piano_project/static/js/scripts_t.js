@@ -27,52 +27,20 @@ $(document).ready(function(){
     })
 })
 
-count = 0
+//reveal text on click, reveal next button after finding all answers
+$(document).ready(function() {
+    let hiddenElementsCount = $('#answerText[hidden]').length;
+    let removedHiddenCount = 0;
 
-function revealD(){
-    document.getElementById('D4').innerText = 'D'
-}
+        $(".white-keys").on('click', function(){
+        $(this).find('#answerText').removeAttr('hidden');
+        removedHiddenCount++;
 
-function revealE(){
-    document.getElementById('E4').innerText = 'E'
-}
-
-function revealF(){
-    document.getElementById('F4').innerText = 'F'
-}
-
-function revealG(){
-    document.getElementById('G4').innerText = 'G'
-}
-
-function revealA(){
-    document.getElementById('A4').innerText = 'A'
-    count ++
-    quizBtn()
-}
-
-function revealB(){
-    document.getElementById('B4').innerText = 'B'
-    count ++
-    quizBtn()
-}
-
-function revealC(){
-    document.getElementById('C4').innerText = 'C'
-    count ++
-    quizBtn()
-}
-
-function revealhiC(){
-    document.getElementById('C5').innerText = 'C'
-    count ++
-    quizBtn()
-}
-
-function quizBtn(){
-    if (count == 4)
-        document.getElementById('btn-next').innerText = 'Take Quiz'
-}
-
+        if (removedHiddenCount === hiddenElementsCount) {
+        console.log('All hidden elements have been removed.');
+        $('#btn-next').removeAttr('hidden')
+        }
+    });
+});
 
 
