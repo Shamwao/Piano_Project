@@ -22,7 +22,6 @@
     height: 700px;
     display: flex;
     flex-direction: column;
-    border: 1px solid blueviolet;
 }
 .main-box{
     width: 800px;
