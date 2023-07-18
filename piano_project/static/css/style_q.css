@@ -98,3 +98,15 @@
     display: flex;
     justify-content: flex-end;
 }
+.center{
+    display: flex;
+    justify-content: center;
+}
+.links{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
