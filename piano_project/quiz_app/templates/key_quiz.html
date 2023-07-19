@@ -67,13 +67,13 @@
             </div>
             <button class ="btn btn-primary btn-lg" onclick="poseQuestion();hide(this)">Start Quiz</button>
             <div class="answer-box">
-                <button class="useranswer" id="A" onclick="clean()">A</button>
-                <button class="useranswer" id="B" onclick="clean()">B</button>
-                <button class="useranswer" id="C" onclick="clean()">C</button>
-                <button class="useranswer" id="D" onclick="clean()">D</button>
-                <button class="useranswer" id="E" onclick="clean()">E</button>
-                <button class="useranswer" id="F" onclick="clean()">F</button>
-                <button class="useranswer" id="G" onclick="clean()">G</button>
+                <button class="useranswer" id="A">A</button>
+                <button class="useranswer" id="B">B</button>
+                <button class="useranswer" id="C">C</button>
+                <button class="useranswer" id="D">D</button>
+                <button class="useranswer" id="E">E</button>
+                <button class="useranswer" id="F">F</button>
+                <button class="useranswer" id="G">G</button>
             </div>
             <form action="/quiz/keys/score/" method="post">
                 {% csrf_token %}
