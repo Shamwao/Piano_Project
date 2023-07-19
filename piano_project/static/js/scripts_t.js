@@ -30,16 +30,17 @@ $(document).ready(function(){
 //reveal text on click 
 //reveal next button after finding all answers
 $(document).ready(function() {
-    let hiddenElementsCount = $('#answerText[hidden]').length;
+    let hiddenElementsCount = $('#answerText[hidden]').length
     let removedHiddenCount = 0;
 
         $(".white-keys").click(function(){
         if($(this).children().length){   
-        $(this).find('#answerText').removeAttr('hidden');
-        removedHiddenCount++;
+        $(this).children().removeAttr('hidden')
+        removedHiddenCount++
+        $(this).off('click')
         }
         if (removedHiddenCount === hiddenElementsCount) {
-        console.log('All hidden elements have been removed.');
+        console.log('All hidden elements have been removed.')
         $('#btn-next').removeAttr('hidden')
         }
     });
