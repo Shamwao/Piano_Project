@@ -33,10 +33,11 @@ $(document).ready(function() {
     let hiddenElementsCount = $('#answerText[hidden]').length;
     let removedHiddenCount = 0;
 
-        $(".white-keys").on('click', function(){
+        $(".white-keys").click(function(){
+        if($(this).children().length){   
         $(this).find('#answerText').removeAttr('hidden');
         removedHiddenCount++;
-
+        }
         if (removedHiddenCount === hiddenElementsCount) {
         console.log('All hidden elements have been removed.');
         $('#btn-next').removeAttr('hidden')
