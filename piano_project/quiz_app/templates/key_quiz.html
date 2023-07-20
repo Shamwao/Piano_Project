@@ -40,7 +40,7 @@
             </nav>
         </div>
         <div class="main">
-            <h2 class="text-center">Select the Correct Key Name</h2>
+            <h2 class="text-center" id="headline">Select the Correct Key Name</h2>
             <div class="scoreboard">
                 <h3 id ="score"></h3>
             </div>
@@ -75,14 +75,19 @@
                 <button class="useranswer" id="F">F</button>
                 <button class="useranswer" id="G">G</button>
             </div>
+            <div class="form-box">
             <form action="/quiz/keys/score/" method="post">
                 {% csrf_token %}
                 <input hidden name ="name" value ="White Keys">
                 <input hidden name ="finalScore" value ="{{quiz.score}}" id="finalScore">
                 <input hidden name ="passed" value = "" id ="passed">
                 <input hidden name ="user_id" value ="{{user.id}}" id="user_id">
-                <button hidden class ="btn btn-primary btn-lg" id="complete" type="submit">Finish Quiz</button>
+                <button hidden class ="btn btn-primary btn-lg mb-6" id="finish" type="submit" style="width:200px">
+                    Finish Quiz</button> 
             </form>
+            <a href="/quiz/keys"><button hidden class ="btn btn-secondary btn-lg mb-6" id="retake" type="submit" style="width:200px">
+                Retake Quiz</button></a>
+            </div>
         </div>
     </div>
     <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>

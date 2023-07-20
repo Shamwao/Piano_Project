@@ -19,7 +19,7 @@
 }
 .main {
     width: inherit;
-    height: 700px;
+    height: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -32,7 +32,7 @@
 }
 .black-box {
     width: inherit;
-    height: 250px;
+    height: 230px;
     margin-bottom: 80px;
     display: flex;
     flex-direction: row;
@@ -60,38 +60,46 @@
 }
 .black-keys {
     width: 150px;
-    height: 200px;
+    height: 180px;
     background-color: black;
     border-radius: 25px;
 }
 .white-box{
     width: inherit;
-    height: 250px;
+    height: 180px;
     margin-top: -150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     z-index: 1;
-
+    margin-bottom: 10px;
 }
 .white-keys {
     width: 170px;
-    height: 200px;
+    height: 180px;
     border-radius: 25px;
     border: solid 1px black;
 }
 .answer-box{
     width: inherit;
-    height: 200px;
+    height: 80px;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    margin-bottom: 10px;
 }
 .useranswer{
     width: 80px;
     height: 80px;
     border-radius: 50%;
+}
+.form-box{
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .btn-next{
     width: inherit;

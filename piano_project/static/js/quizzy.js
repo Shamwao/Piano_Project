@@ -8,8 +8,8 @@
 
     function poseQuestion() {
       let random = Math.floor(Math.random() * testKeys.length);
-        console.log("randomly selected key:", testKeys[random]);
         const randomAnswer = answerKeys[random];
+        console.log("randomly selected key:", testKeys[random]);
         randomAnswer.style.backgroundColor = 'red';
         realAnswer = randomAnswer.id;
         return realAnswer
@@ -46,11 +46,17 @@
             quizComplete = true;
             const finalScore = score;
             const passed = finalScore === 100;
-            // Display the final score and pass/fail status in the UI
+            if (finalScore == 100){
+                document.getElementById('headline').innerText = 'You scored: ' + finalScore + ". Congrats, you passed!"
+            } else {
+                document.getElementById('headline').innerText = 'You scored: ' + finalScore + ". Keep practicing!"
+            }
             document.getElementById('finalScore').value = finalScore;
             document.getElementById('passed').value = passed;
             clean();
-            document.getElementById('complete').removeAttribute('hidden');
+            document.getElementById('finish').removeAttribute('hidden');
+            document.getElementById('retake').removeAttribute('hidden');
+
         
         document.querySelectorAll('.useranswer').forEach((el) => {
             el.removeEventListener("click", checkAnswer);
