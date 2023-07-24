@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Your Keys</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css'%}">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <nav class="navbar fixed-top navbar-expand-lg" style="background-color:#8CDEEB" >
+                <a class="navbar-brand" href="/dashboard">
+                    <img src="{%static 'img\Piano-Parrot_Final-RGB.png' %}" class='logo ms-5' width="320" height="100" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active px-4 fs-4" aria-current="page" href="/profile">My Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active px-4 fs-4" href="/tutorial/index">Tutorials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active px-4 fs-4" href="/quiz/main">Quizzes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active px-4 fs-4" href="/lessons">Schedule a Lesson</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active px-4 fs-4" href="/logout">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="main">
+            <div class="text-box"></div>
+            <h2 class="text-center" id="top-text">Recall that the dog lives in the small house. Hey there, buddy!</h2>
+            <div class="black-box">
+                <div class="left-keys">
+                    <div class="black-keys" id="Db4"></div>
+                    <img src="{% static 'img/doghouse.png' %}" alt="doghouse" id="doghouse">
+                    <div class="black-keys" id="Eb4">
+                        <img src="{%static 'img/surpriseddog.png' %}" alt="surpriseddog" id="surpriseddog" hidden >
+                    </div>
+                </div>
+                <div class="right-keys">
+                    <div class="black-keys" id="Gb4"></div>
+                    <img src="{% static 'img/bungalow.png' %}" alt="bungalow" id="bungalow">
+                    <div class="black-keys" id="Ab4"></div>
+                    <div class="black-keys" id="Bb4"></div>
+                </div>
+            </div>
+            <div class="white-box">
+                <div class="white-keys" id="C4"></div>
+                <div class="white-keys" id="D4">
+                    <img src="{% static 'img/smileydog.png' %}" alt="dog" id="dog">
+                </div>
+                <div class="white-keys" id="E4"></div>
+                <div class="white-keys" id="F4"></div>
+                <div class="white-keys" id="G4"></div>
+                <div class="white-keys" id="A4"></div>
+                <div class="white-keys" id="B4"></div>
+                <div class="white-keys" id="C5"></div>
+            </div>
+            <div>
+            <h2 class="text-center" id="bottom-text">Now...imagine he were to *hypothetically* sit on something sharp...<br>
+                                                    He'd jump up high in the air, right? Which black key do you think he'd land on?</h2>
+            </div>
+            <div class="btn-next">
+            <a class="btn btn-primary" href="/tutorial/bkeys" role="button" id="btn-prev"><</a>
+            <a class="btn btn-primary" href="2" role="button" id="btn-next" hidden>></a>
+        </div>        </div>
+    </div>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
+    <script src="{% static 'js/scripts_bkspec.js'%}"></script>
+</body>
+</html>

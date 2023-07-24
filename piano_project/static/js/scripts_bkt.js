@@ -27,13 +27,11 @@ $(document).ready(function(){
     })
 })
 
-// reveal text on click 
-// reveal next button after finding all answers
 $(document).ready(function() {
     let hiddenElementsCount = $('#answerText[hidden]').length
     let removedHiddenCount = 0;
 
-        $(".white-keys").click(function(){
+        $(".black-keys").click(function(){
         if($(this).children().length){   
         $(this).children().removeAttr('hidden')
         removedHiddenCount++
@@ -45,7 +43,3 @@ $(document).ready(function() {
         }
     });
 });
-
-
-
-

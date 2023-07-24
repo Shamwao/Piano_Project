@@ -17,4 +17,11 @@ def keys_tutorial3(request):
     return render(request, "tutorial3.html")
 
 def keys_tutorial4(request):
-    return redirect('/quiz/keys')
+    return redirect(request, '/quiz/keys')
+
+def bk_tutorial(request):
+    return render (request, "bk_tutorial.html")
+
+def bk_tutorial1(request):
+    return render (request, "bk_tutorial1.html")
+

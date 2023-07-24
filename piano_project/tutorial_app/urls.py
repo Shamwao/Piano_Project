@@ -8,4 +8,6 @@ urlpatterns = [
     path('keys/3', views.keys_tutorial3),
     path('keys/4', views.keys_tutorial4),
     path('index', views.tutorial_index),
+    path('bkeys/', views.bk_tutorial),
+    path('bkeys/1', views.bk_tutorial1),
 ]
