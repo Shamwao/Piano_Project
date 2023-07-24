@@ -58,6 +58,8 @@
     height: 200px;
     background-color: black;
     border-radius: 25px;
+    display: flex;
+    align-items: flex-end;
 }
 .white-box{
     width: inherit;
@@ -80,6 +82,11 @@
 .btn-next{
     width: inherit;
     display: flex;
+    justify-content: space-between;
+}
+.btn-take-quiz{
+    width: inherit;
+    display: flex;
     justify-content: flex-end;
 }
 #doghouse{
@@ -88,4 +95,15 @@
 #bungalow{
     position: absolute;
     width: 220px;
+}
+#dog{
+    height: 67px;
+    width: 67px;
+    margin-bottom: 60px;
+    margin-right: 20px;
+}
+#surpriseddog{
+    height: 67px;
+    width: 67px;
+    margin-left: 50px;
 }
