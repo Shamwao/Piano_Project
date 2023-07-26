@@ -25,3 +25,6 @@ def bk_tutorial(request):
 def bk_tutorial1(request):
     return render (request, "bk_tutorial1.html")
 
+def bk_tutorial2(request):
+    return render (request, "bk_tutorial2.html")
+

@@ -10,4 +10,6 @@ urlpatterns = [
     path('index', views.tutorial_index),
     path('bkeys/', views.bk_tutorial),
     path('bkeys/1', views.bk_tutorial1),
+    path('bkeys/2', views.bk_tutorial2),
+
 ]

@@ -34,7 +34,7 @@ $(document).ready(function(){
         if ($(this).attr('id') =='Eb4'){
             console.log('Right answer')
             $('#top-text').text('Correct!*No dogs were harmed in the making of this tutorial*')
-            $('#bottom-text').text('The name of this black key is D Sharp or D#. In music, sharp means to go a little higher.')
+            $('#bottom-text').text('The name of this black key is D Sharp or D#. In music, sharp (#) means to go a little higher.')
             $('#dog').remove()
             $('#surpriseddog').removeAttr('hidden')
             $('#btn-next').removeAttr('hidden')
