@@ -79,6 +79,15 @@
     justify-content: center;
     align-items: flex-end;
 }
+.icons{
+    width: 140px;
+    height: 160px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
 .btn-next{
     width: inherit;
     display: flex;
@@ -99,11 +108,15 @@
 #dog{
     height: 67px;
     width: 67px;
-    margin-bottom: 60px;
-    margin-right: 20px;
+    margin-top: 30px;
 }
 #surpriseddog{
     height: 67px;
     width: 67px;
     margin-left: 50px;
+}
+#safety-pin{
+    height: 40px;
+    width: 40px;
+    visibility: hidden; 
 }
