@@ -27,6 +27,18 @@ $(document).ready(function(){
     })
 })
 
+//D click triggers next event
+$(document).ready(function() {
+    var dog = $('#dog');
+    var confusedImageSrc ="/static/img/confused.png";
+
+    $('#D4').on('click', function() {
+        $('#top-text').html("Great! Now...imagine he were to *hypothetically* sit on something <strong>sharp</strong>...<br> He'd jump up high in the air, right? Which black key do you think he'd land on?<br>Click your answer to find out!</h2>");
+        $('#safety-pin').css('visibility', 'visible');
+        dog.attr('src', confusedImageSrc);
+    });
+});
+
 //bkey trigger
 //click on Eb to trigger next event
 $(document).ready(function(){
@@ -34,32 +46,17 @@ $(document).ready(function(){
         if ($(this).attr('id') =='Eb4'){
             console.log('Right answer')
             $('#top-text').text('Correct!*No dogs were harmed in the making of this tutorial*')
-            $('#bottom-text').text('The name of this black key is D Sharp or D#. In music, sharp (#) means to go a little higher.')
-            $('#dog').remove()
+            $('#bottom-text').html('The name of this black key is <strong>D Sharp</strong> or D#. In music, sharp (#) means to go a little higher.')
+            $('#dog').css('visibility', 'hidden')
             $('#surpriseddog').removeAttr('hidden')
+            $('#safety-pin').removeAttr('hidden')
             $('#btn-next').removeAttr('hidden')
         } else {
             console.log('Wrong answer')
             $('#top-text').text('Nope. Try a different black key')
             $('#bottom-text').text('')
+            $(this).off('click')
         }
     })
 })
 
-
-
-
-
-// $(document).ready(function(){
-//     if($('#Eb4').data('clicked', true)){
-//         console.log('Right answer')
-//         // $('#top-text').text('Correct!')
-//         // $('#bottom-text').text('*No dogs were harmed in the making of this tutorial*')
-//         // $('#dog').remove()
-//         // $('#surpriseddog').removeAttr('hidden')
-//         // $('#btn-next').removeAttr('hidden')
-//     } else if ($('.white-keys').data('clicked',true)){
-//         console.log('Wrong Answer')
-//         // $('#top-text').text('Nope. Try a different black key')
-//     }
-// })
