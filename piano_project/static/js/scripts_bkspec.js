@@ -33,8 +33,9 @@ $(document).ready(function() {
     var confusedImageSrc ="/static/img/confused.png";
 
     $('#D4').on('click', function() {
-        $('#top-text').html("Great! Now...imagine he were to *hypothetically* sit on something <strong>sharp</strong>...<br> He'd jump up high in the air, right? Which black key do you think he'd land on?<br>Click your answer to find out!</h2>");
-        $('#safety-pin').css('visibility', 'visible');
+        $('#top-text').html("Great! Now...imagine he were to *hypothetically* sit on something <strong>sharp</strong>...<br> He'd jump up high in the air, right? Which black key do you think he'd land on?");
+        $('#safety-pin').css('visibility', 'visible')
+        $('#bottom-text').html('Click your answer to find out!')
         dog.attr('src', confusedImageSrc);
     });
 });
