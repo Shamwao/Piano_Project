@@ -52,11 +52,11 @@ $(document).ready(function(){
             $('#surpriseddog').removeAttr('hidden')
             $('#safety-pin').removeAttr('hidden')
             $('#btn-next').removeAttr('hidden')
+            $('.black-keys').off('click')
         } else {
             console.log('Wrong answer')
             $('#top-text').text('Nope. Try a different black key')
             $('#bottom-text').text('')
-            $(this).off('click')
         }
     })
 })
