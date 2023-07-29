@@ -60,6 +60,7 @@
     border-radius: 25px;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
 }
 .white-box{
     width: inherit;
@@ -119,4 +120,13 @@
     height: 40px;
     width: 40px;
     visibility: hidden; 
+}
+#car{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 60px;
+}
+#flat-tire{
+    height: 80px;
+    width: 80px;
 }
