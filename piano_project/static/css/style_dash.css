@@ -30,85 +30,27 @@
     display: flex;
     flex-direction: column;
 }
-.black-box {
-    width: inherit;
-    height: 250px;
-    margin-bottom: 80px;
-    display: flex;
-    flex-direction: row;
-}
 .nav-link {
     font-size: large;
 }
-.left-keys {
-    width: 350px;
-    height: inherit;
-    margin-left: 40px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    z-index: 2;
-}
-.right-keys {
-    width: 500px;
-    height: inherit;
-    margin-left: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
-    z-index: 2;
-}
-.black-keys {
-    width: 150px;
-    height: 200px;
-    background-color: black;
-    border-radius: 25px;
-}
-.white-box{
-    width: inherit;
-    height: 250px;
-    margin-top: -150px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    z-index: 1;
-
-}
-.white-keys {
-    width: 170px;
-    height: 200px;
-    border-radius: 25px;
-    border: solid 1px black;
-}
-.answer-box{
-    width: inherit;
-    height: 200px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.useranswer{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-.btn-next{
-    width: inherit;
-    display: flex;
-    justify-content: flex-end;
-}
-.center{
+.card-box{
     display: flex;
     justify-content: center;
 }
 .links{
-    width: 50%;
     height: 400px;
+    width: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    align-items: flex-start;
+}
+.card{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+#dog, #quiz, #user, #music{
+    height: 100px;
+    width: 100px;
 }
