@@ -49,6 +49,7 @@
     width: 300px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 #dog, #quiz, #user, #music{
     height: 100px;
