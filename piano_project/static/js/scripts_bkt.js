@@ -68,7 +68,7 @@ $(document).ready(function(){
                 console.log("Audio context is now active");
             }).catch((err) => {
                 console.error("Failed to initialize the audio context:", err);
-            });
+            })
         }
 
         // Play the audio for the piano key

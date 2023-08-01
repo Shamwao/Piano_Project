@@ -54,7 +54,7 @@ $(document).ready(function(){
             }).toDestination();
             polySynth.triggerAttackRelease(frequency, "8n");
         } catch (error) {
-            console.error(error.message);
+            console.error(error.message)
         }
     }
 
