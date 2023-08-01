@@ -7,11 +7,10 @@ Github Repo link: https://github.com/Shamwao/Piano_Project.git
 
 Features:
 -Login and registration
--Clickable CSS piano that plays corresponding piano mp3s on click
+-Clickable CSS piano that utilizes Tone.js API for audio
 -Interactive tutorials/Quizzes
 -Progress tracker 
 
 Backlog:
 -Lesson scheduling Page
 -Additional tutorials/quizzes (inversions, minor scales, arpeggios, etc)
--API for audio (if that is a thing?)
