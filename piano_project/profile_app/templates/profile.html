@@ -39,15 +39,15 @@
                 </div>
             </nav>
         </div>
-        <h1 class="text-center">{{ user.first_name }}'s Profile</h1>
+        <h1 class="text-center mb-3">{{ user.first_name }}'s Profile</h1>
         <div class="field d-flex justify-content-center">
             <div class="main-box">
-                <table class="table table-striped-columns">
+                <table class="table table-success table-bordered">
                     <h3>Lessons Scheduled</h3>
                     <tr>
                         <th>Date</th>
                         <th>Time</th>
-                        <th>Commands</th>
+                        <th>Update/Delete</th>
                     </tr>
                     <tr>
                         {% for lesson in lessons %}
@@ -57,7 +57,7 @@
                     </tr>
                         {% endfor %}
                 </table>
-                <table class="table table-striped-columns">
+                <table class="table table-info table-bordered">
                     <h3>Quiz Results</h3>
                     <tr>
                         <th>Quiz</th>
@@ -68,7 +68,7 @@
                         {% for quiz in quizzes %}
                         <td>{{quiz.name}}</td>
                         <td>{{quiz.score}} </td>
-                        <td></td>
+                        <td><img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot" hidden></td>
                     </tr>
                         {%endfor%}
                 </table>

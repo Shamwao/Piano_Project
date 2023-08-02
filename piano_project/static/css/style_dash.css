@@ -54,4 +54,5 @@
 #dog, #quiz, #user, #music{
     height: 100px;
     width: 100px;
+    margin-top: 10px;
 }
