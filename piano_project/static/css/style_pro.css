@@ -1,36 +1,60 @@
 .container {
-    width: auto;
-    height: 900px;
+    width: 90%; /* Use a percentage-based width instead of fixed pixels */
+    max-width: 1200px; /* Set a maximum width to prevent the container from becoming too wide on larger screens */
+    height: auto; /* Let the height adjust based on content */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
+
 .top {
-    width: inherit;
-    height: 100px;
-    margin: 0 auto;
+    height: 10%; /* Use a percentage-based height */
 }
+
 .navbar {
-    width: inherit;
-    height: inherit;
+    height: 10%; /* Use a percentage-based height */
     color: white;
     display: flex;
     justify-content: center;
 }
+
 .main {
-    width: inherit;
-    height: 700px;
+    flex: 1; /* Allow the main section to take the remaining space in the container */
     display: flex;
     flex-direction: column;
 }
-.main-box{
-    width: 600px;
-    height: 400px;
+
+.main-box {
+    width: 90%; /* Use a percentage-based width */
+    max-width: 600px; /* Set a maximum width for this element */
+    height: auto; /* Let the height adjust based on content */
     display: flex;
     flex-direction: column;
-    gap: 20px}
-#parrot{
-    width: 70px;
-    height: 50px;
+    gap: 20px;
+}
+
+#parrot {
+    width: 20%; /* Use a percentage-based width */
+    height: auto; /* Let the height adjust based on the aspect ratio */
     border-radius: 50%;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .container {
+        height: auto;
+    }
+
+    .top, .navbar, .main {
+        height: auto;
+    }
+
+    .main-box {
+        width: 90%;
+        max-width: 100%; /* Full-width on small screens */
+    }
+
+    #parrot {
+        width: 30%;
+    }
 }
