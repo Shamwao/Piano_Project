@@ -16,14 +16,4 @@ $(document).ready(function(){
     })
 })
 
-//audio playback
-
-$(document).ready(function(){
-    $(document).mousedown(function(event){
-        let audio = new Audio("/static/tones/piano-mp3_"+event.target.id+".mp3")
-        audio.play()
-        $(document).mouseup(function(){
-        })
-    })
-})
 

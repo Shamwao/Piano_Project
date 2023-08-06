@@ -107,6 +107,7 @@ $(document).ready(function() {
         if (removedHiddenCount === hiddenElementsCount) {
         console.log('All hidden elements have been removed.')
         $('#btn-next').removeAttr('hidden')
+        $('#dog').removeAttr('hidden')
         }
     });
 });

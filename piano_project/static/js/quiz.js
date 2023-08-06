@@ -1,10 +1,3 @@
-//tutorial/keys
-
-//tutorial/chords
-
-//tutorial/scales
-
-
 
 //quiz/keys 
 
