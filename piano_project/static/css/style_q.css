@@ -7,7 +7,7 @@
 }
 .top {
     width: inherit;
-    height: 120px;
+    height: 15%;
     margin: 0 auto;
 }
 .navbar {
@@ -80,7 +80,7 @@
 }
 .answer-box{
     width: inherit;
-    height: 80px;
+    height: auto;
     margin-top: 10px;
     display: flex;
     flex-direction: row;
@@ -88,13 +88,13 @@
     margin-bottom: 10px;
 }
 .useranswer{
-    width: 80px;
-    height: 80px;
+    width: auto;
+    height: auto;
     border-radius: 50%;
 }
 .form-box{
     width: auto;
-    height: 100px;
+    height: auto;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -104,15 +104,22 @@
     display: flex;
     justify-content: flex-end;
 }
-.center{
-    display: flex;
-    justify-content: center;
-}
-.links{
-    width: 50%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .container {
+        height: auto;
+    }
+
+    .top, .navbar, .main {
+        height: auto;
+    }
+
+    .main-box {
+        width: 90%;
+        max-width: 100%; /* Full-width on small screens */
+    }
+
+    #parrot {
+        width: 30%;
+    }
 }

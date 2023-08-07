@@ -56,3 +56,22 @@
     width: 100px;
     margin-top: 10px;
 }
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    .container {
+        height: auto;
+    }
+
+    .top, .navbar, .main {
+        height: auto;
+    }
+
+    .main-box {
+        width: 90%;
+        max-width: 100%; /* Full-width on small screens */
+    }
+
+    #parrot {
+        width: 30%;
+    }
+}
