@@ -6,12 +6,13 @@
     flex-direction: column;
 }
 .top {
-    width: inherit;
+    width: auto;
     height: 15%;
     margin: 0 auto;
 }
 .navbar {
     height: 15%;
+    margin-bottom: 8%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,6 +21,7 @@
     flex:1;
 }
 #top-text{
+    margin-top: 9%;
     margin-bottom: 3%;
 }
 .black-box {
@@ -106,20 +108,41 @@
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
-    .container {
-        height: auto;
-    }
-
-    .top, .navbar, .main {
-        height: auto;
-    }
-
-    .main-box {
-        width: 90%;
-        max-width: 100%; /* Full-width on small screens */
-    }
-
-    #parrot {
-        width: 30%;
+    @media (max-width: 767px) {
+        .navbar {
+            height: auto; /* Allow the navbar to adjust its height based on content */
+            position: static; /* Remove the fixed position to make it flow with the content */
+            background-color: transparent; /* Make the background transparent or adapt as needed */
+        }
+        
+        .navbar-brand {
+            margin-right: auto; /* Move the brand/logo to the left side */
+        }
+        
+        .navbar-toggler {
+            margin-left: auto; /* Move the toggler to the right side */
+        }
+        
+        .collapse.navbar-collapse {
+            position: absolute; /* Overlay the collapsed menu over the content */
+            top: 100px; /* Adjust the top position as needed */
+            background-color: #8CDEEB; /* Add the background color back */
+            width: 100%; /* Make the collapsed menu full width */
+            text-align: center; /* Center the menu items */
+            display: none; /* Hide the collapsed menu by default */
+        }
+        
+        .collapse.show {
+            display: block; /* Show the collapsed menu when the toggler is clicked */
+        }
+        
+        .navbar-nav {
+            flex-direction: column; /* Stack the menu items vertically */
+            align-items: center; /* Center align the menu items */
+        }
+        
+        .nav-link {
+            padding: 1rem; /* Add padding for touch-friendly areas */
+        }
     }
 }

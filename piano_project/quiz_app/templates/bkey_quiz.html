@@ -40,7 +40,7 @@
             </nav>
         </div>
         <div class="main">
-            <h2 class="text-center">Select the Correct Key Name</h2>
+            <h2 class="text-center" id="top-text">Select the Correct Key Name</h2>
             <div class="scoreboard">
                 <h3 id ="score"></h3>
             </div>
@@ -67,20 +67,24 @@
             </div>
             <button class ="btn btn-primary btn-lg mt-2" onclick="poseQuestion();hide(this)">Start Quiz</button>
             <div class="answer-box">
-                <button class="useranswer" id="Db" onclick="clean()">C#/Db</button>
-                <button class="useranswer" id="Eb" onclick="clean()">D#/Eb</button>
-                <button class="useranswer" id="Gb" onclick="clean()">F#/Gb</button>
-                <button class="useranswer" id="Ab" onclick="clean()">G#/Ab</button>
-                <button class="useranswer" id="Bb" onclick="clean()">A#/Bb</button>
+                <button class="useranswer" id="Db">C#/Db</button>
+                <button class="useranswer" id="Eb">D#/Eb</button>
+                <button class="useranswer" id="Gb">F#/Gb</button>
+                <button class="useranswer" id="Ab">G#/Ab</button>
+                <button class="useranswer" id="Bb">A#/Bb</button>
             </div>
+            <div class="form-box">
             <form action="/quiz/keys/score/" method="post">
                 {% csrf_token %}
                 <input hidden name ="name" value ="Black Keys">
                 <input hidden name ="finalScore" value ="{{quiz.score}}" id="finalScore">
                 <input hidden name ="passed" value = "" id ="passed">
                 <input hidden name ="user_id" value ="{{user.id}}" id="user_id">
-                <button hidden class ="btn btn-primary btn-lg" id="complete" type="submit">Finish Quiz</button>
+                <button hidden class ="btn btn-primary btn-lg" id="finish" type="submit">Finish Quiz</button>
             </form>
+            <a href="/quiz/bkeys"><button hidden class ="btn btn-secondary btn-lg mb-6" id="retake" type="submit" style="width:200px">
+                Retake Quiz</button></a>
+            </div>
         </div>
     </div>
     <script src="{% static 'js/jquery-3.6.1.min.js' %}"></script>
