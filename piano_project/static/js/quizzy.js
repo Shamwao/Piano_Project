@@ -47,9 +47,9 @@
             const finalScore = score;
             const passed = finalScore === 100;
             if (finalScore == 100){
-                document.getElementById('headline').innerText = 'You scored: ' + finalScore + ". Congrats, you passed!"
+                document.getElementById('top-text').innerText = 'You scored: ' + finalScore + ". Congrats, you passed!"
             } else {
-                document.getElementById('headline').innerText = 'You scored: ' + finalScore + ". Keep practicing!"
+                document.getElementById('top-text').innerText = 'You scored: ' + finalScore + ". Keep practicing!"
             }
             document.getElementById('finalScore').value = finalScore;
             document.getElementById('passed').value = passed;
