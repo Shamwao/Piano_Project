@@ -3,6 +3,7 @@ Piano Parrot
 A full stack application that offers tutorials and quizzes for piano fundamentals
 
 Stack: Python/Django
+
 DB: MySQL
 
 Hosted on AWS Elastic Beanstalk platform. 
