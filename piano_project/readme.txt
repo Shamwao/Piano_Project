@@ -16,7 +16,14 @@ Features:
 -Login and registration: password security maintained with Bcrypt
 
 Backlog:
--Deploy to a real URL
--Additional tutorials/quizzes (intervals, scales (major, minor, blues, pentatonic), arpeggios...)
+Large:
 -Improvising logic for piano
 -Improvising tutorial
+
+Medium:
+-Additional tutorials/quizzes (intervals, scales (major, minor, blues, pentatonic), arpeggios...)
+
+Small:
+-Deploy to a real URL
+-Add colors/highlighter to answer buttons
+
