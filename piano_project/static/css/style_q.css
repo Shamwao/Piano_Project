@@ -107,19 +107,23 @@
     justify-content: flex-end;
 }
 #doghouse{
+    max-width: 100%;
     top: 39%;
     position: absolute;
 }
 #bungalow{
+    max-width: 100%;
     position: absolute;
-    width: 220px;
+    width: 40%;
 }
 #dog {
+    max-width: 100%;
     width: 50px; /* Set the width of the image as per your requirement */
     height: auto; /* To maintain the image's aspect ratio */
 }
 #surpriseddog{
-    height: 67px;
+    max-width: 100%;
+    height: auto;
     width: 67px;
     margin-left: 50px;
 }

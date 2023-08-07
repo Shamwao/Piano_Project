@@ -50,7 +50,6 @@
 .black-keys {
     width: 35%;
     height: 200px;
-    padding-bottom: 40%;
     margin-right: -5%;
     background-color: black;
     border-radius: 25px;
@@ -77,8 +76,7 @@
     border: solid 1px black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
 }
 #answerText{
     align-self: center;
@@ -107,12 +105,12 @@
     justify-content: flex-end;
 }
 #doghouse{
-    top: 39%;
+    top: 42%;
     position: absolute;
 }
 #bungalow{
     position: absolute;
-    width: 220px;
+    width: 10%;
 }
 #dog {
     width: 50px; /* Set the width of the image as per your requirement */
