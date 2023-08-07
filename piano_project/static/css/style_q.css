@@ -7,7 +7,7 @@
 }
 .top {
     width: inherit;
-    height: 150px;
+    height: 120px;
     margin: 0 auto;
 }
 .navbar {
@@ -50,7 +50,6 @@
 .black-keys {
     width: 35%;
     height: 200px;
-    padding-bottom: 40%;
     margin-right: -5%;
     background-color: black;
     border-radius: 25px;
@@ -77,67 +76,43 @@
     border: solid 1px black;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-#answerText{
-    align-self: center;
-    justify-self: center;
-}
-#bottom-text{
-    margin-top: 3%;
-}
-.icons{
-    height: 45%;
-    display: flex;
-    margin-bottom: 25%;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
     justify-content: flex-end;
+}
+.answer-box{
+    width: inherit;
+    height: 80px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.useranswer{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.form-box{
+    width: auto;
+    height: 100px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .btn-next{
     width: inherit;
     display: flex;
-    justify-content: space-between;
-}
-.btn-take-quiz{
-    width: inherit;
-    display: flex;
     justify-content: flex-end;
 }
-#doghouse{
-    max-width: 100%;
-    top: 39%;
-    position: absolute;
+.center{
+    display: flex;
+    justify-content: center;
 }
-#bungalow{
-    max-width: 100%;
-    position: absolute;
-    width: 40%;
-}
-#dog {
-    max-width: 100%;
-    width: 50px; /* Set the width of the image as per your requirement */
-    height: auto; /* To maintain the image's aspect ratio */
-}
-#surpriseddog{
-    max-width: 100%;
-    height: auto;
-    width: 67px;
-    margin-left: 50px;
-}
-#safety-pin{
-    height: 40px;
-    width: 40px;
-    visibility: hidden; 
-}
-#car{
-    height: 80px;
-    width: 80px;
-    margin-bottom: 60px;
-}
-#flat-tire{
-    height: 80px;
-    width: 80px;
+.links{
+    width: 50%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }

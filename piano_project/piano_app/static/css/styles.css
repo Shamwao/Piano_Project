@@ -1,112 +1,137 @@
 .container {
-    width: auto;
-    height: 900px;
+    width: 100%;
+    height: auto;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
 .top {
     width: inherit;
-    height: 100px;
+    height: 150px;
     margin: 0 auto;
 }
-.nav-bar {
-    width: inherit;
-    height: inherit;
-    background-color: rgb(16, 130, 130);
-    color: white;
+.navbar {
+    height: 15%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .main {
-    width: inherit;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
+    flex:1;
 }
-.main-box{
-    width: 800px;
-    height: 400px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
+#top-text{
+    margin-bottom: 3%;
 }
 .black-box {
-    width: inherit;
-    height: 250px;
-    margin-bottom: 80px;
+    height: 30%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 .left-keys {
-    width: 350px;
-    height: inherit;
-    margin-left: 40px;
+    width: 50%;
+    padding-right: 8%;
+    margin-left: 3%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: space-evenly; 
     z-index: 2;
-    position: relative;
 }
 .right-keys {
-    width: 500px;
-    height: inherit;
-    margin-left: 70px;
+    width: 50%;
+    margin-right: 22%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: flex-end;
     z-index: 2;
-    position: relative;
 }
 .black-keys {
-    width: 150px;
+    width: 35%;
     height: 200px;
+    margin-right: -5%;
     background-color: black;
     border-radius: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.right-keys .black-keys {
+    width: 28%; 
+    margin: 0% 2%;
 }
 .white-box{
-    width: inherit;
-    height: 250px;
-    margin-top: -150px;
+    height: 25%;
+    margin-top: -10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     z-index: 1;
 
 }
 .white-keys {
-    width: 170px;
+    width: 12%;
     height: 200px;
     border-radius: 25px;
     border: solid 1px black;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
 }
-.answer-box{
-    width: inherit;
-    height: 200px;
-    margin-top: 10px;
+#answerText{
+    align-self: center;
+    justify-self: center;
+}
+#bottom-text{
+    margin-top: 3%;
+}
+.icons{
+    height: 45%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.useranswer{
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    margin-bottom: 25%;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
 }
 .btn-next{
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-take-quiz{
     width: inherit;
     display: flex;
     justify-content: flex-end;
 }
 #doghouse{
+    top: 42%;
     position: absolute;
 }
 #bungalow{
     position: absolute;
-    width: 220px;
+    width: 10%;
+}
+#dog {
+    width: 50px; /* Set the width of the image as per your requirement */
+    height: auto; /* To maintain the image's aspect ratio */
+}
+#surpriseddog{
+    height: 67px;
+    width: 67px;
+    margin-left: 50px;
+}
+#safety-pin{
+    height: 40px;
+    width: 40px;
+    visibility: hidden; 
+}
+#car{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 60px;
+}
+#flat-tire{
+    height: 80px;
+    width: 80px;
 }
