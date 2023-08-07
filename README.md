@@ -1,5 +1,6 @@
 **Piano Parrot**
-Piano Parrot
+
+
 A full stack application that offers tutorials and quizzes for piano fundamentals
 
 Stack: Python/Django
@@ -7,6 +8,7 @@ Stack: Python/Django
 DB: MySQL
 
 Hosted on AWS Elastic Beanstalk platform. 
+
 URL: http://pianoparrot.eba-de2mxavf.us-west-2.elasticbeanstalk.com/
 
 Github Repo link: https://github.com/Shamwao/Piano_Project.git
