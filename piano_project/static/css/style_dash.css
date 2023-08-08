@@ -13,25 +13,18 @@
 .navbar {
     width: inherit;
     height: inherit;
-    color: white;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
 }
 .main {
     width: inherit;
-    height: 700px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
-.main-box{
-    width: 800px;
-    height: 400px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-}
-.nav-link {
-    font-size: large;
+#top-text{
+    margin-top: 100px;
 }
 .card-box{
     display: flex;
@@ -57,17 +50,15 @@
     margin-top: 10px;
 }
 /* Media Query for Mobile Devices */
-/* Media Query for Mobile Devices */
 @media (max-width: 767px) {
     .navbar {
-        height: auto; /* Allow the navbar to adjust its height based on content */
-        position: static; /* Remove the fixed position to make it flow with the content */
+        height: auto; 
         background-color: #8CDEEB; /* Add the background color for the navbar */
     }
     
     .navbar-brand {
         width: 100%; /* Make the brand/logo fill the width */
-        height: 10%;
+        height: 7%;
         text-align: center; /* Center the brand/logo */
     }
     
@@ -90,8 +81,8 @@
     .nav-link {
         padding: 0.5 rem 1rem; /* Add padding for touch-friendly areas */
     }
-    .main{
-        margin-top: 150px;
+    /* .main{
+        margin-top: 40px;
         max-width: 100%;
-    }
+    } */
 }

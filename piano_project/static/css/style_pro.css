@@ -1,36 +1,31 @@
 .container {
-    width: 90%; /* Use a percentage-based width instead of fixed pixels */
-    max-width: 1200px; /* Set a maximum width to prevent the container from becoming too wide on larger screens */
-    height: auto; /* Let the height adjust based on content */
+    width: 90%; 
+    height: 100px; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
-
 .top {
-    height: 10%; /* Use a percentage-based height */
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
 }
-
 .navbar {
-    height: 10%; /* Use a percentage-based height */
-    color: white;
+    width: inherit;
+    height: inherit;
+    margin-bottom: 10%;
     display: flex;
     justify-content: center;
 }
-
 .main {
-    flex: 1; /* Allow the main section to take the remaining space in the container */
+    width: inherit;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.main-box {
-    width: 90%; /* Use a percentage-based width */
-    max-width: 600px; /* Set a maximum width for this element */
-    height: auto; /* Let the height adjust based on content */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#top-text{
+    margin-top: 15%;
 }
 
 #parrot {
@@ -41,20 +36,37 @@
 
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
-    .container {
-        height: auto;
+    .navbar {
+        height: auto; 
+        background-color: #8CDEEB; /* Add the background color for the navbar */
     }
-
-    .top, .navbar, .main {
-        height: auto;
+    
+    .navbar-brand {
+        width: 100%; /* Make the brand/logo fill the width */
+        height: 7%;
+        text-align: center; /* Center the brand/logo */
     }
-
-    .main-box {
-        width: 90%;
-        max-width: 100%; /* Full-width on small screens */
+    
+    .navbar-toggler {
+        margin-left: auto; /* Move the toggler to the right side */
     }
-
-    #parrot {
-        width: 30%;
+    
+    .collapse.navbar-collapse {
+        position: static; /* Remove the absolute position to allow normal flow */
+        background-color: transparent; /* Make the background transparent */
+        width: 100%; /* Make the collapsed menu full width */
+        text-align: center; /* Center the menu items */
+    }
+    
+    .navbar-nav {
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center; /* Center align the menu items */
+    }
+    
+    .nav-link {
+        padding: 0.5 rem 1rem; /* Add padding for touch-friendly areas */
+    }
+    .main{
+        margin-top: 100px;
     }
 }
