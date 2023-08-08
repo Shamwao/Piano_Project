@@ -106,20 +106,21 @@
     justify-content: flex-end;
 }
 #doghouse{
-    top: 42%;
+    width: 9%;
+    left: 24%;
     position: absolute;
 }
 #bungalow{
     position: absolute;
-    width: 10%;
+    width: 14%;
 }
 #dog {
-    width: 50px; /* Set the width of the image as per your requirement */
-    height: auto; /* To maintain the image's aspect ratio */
+    height: auto;
+    width: 90%; 
 }
 #surpriseddog{
-    height: 67px;
-    width: 67px;
+    height: auto;
+    width: 90%;
     margin-left: 50px;
 }
 #safety-pin{
@@ -128,13 +129,13 @@
     visibility: hidden; 
 }
 #car{
-    height: 80px;
-    width: 80px;
+    height: auto;
+    width: 90%;
     margin-bottom: 60px;
 }
 #flat-tire{
-    height: 80px;
-    width: 80px;
+    height: auto;
+    width: 90%;
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
