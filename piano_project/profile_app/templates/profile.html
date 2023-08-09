@@ -40,10 +40,11 @@
             </nav>
         </div>
     </div>
-        <div class="main">    
+    <div class="field d-flex justify-content-center"> 
+        <div class="main">   
             <h1 class="text-center mb-3" id="top-text">{{ user.first_name }}'s Profile</h1>
-                <table class="table table-success table-bordered">
-                    <h3>Lessons Scheduled</h3>
+                <table class="table table-success table-bordered caption-top">
+                    <caption>Lessons Scheduled</caption>
                     <tr>
                         <th>Date</th>
                         <th>Time</th>
@@ -57,8 +58,8 @@
                     </tr>
                         {% endfor %}
                 </table>
-                <table class="table table-info table-bordered">
-                    <h3>Quiz Results</h3>
+                <table class="table table-info table-bordered caption-top">
+                    <caption>Quiz Results</caption>
                     <tr>
                         <th>Quiz</th>
                         <th>Score</th>

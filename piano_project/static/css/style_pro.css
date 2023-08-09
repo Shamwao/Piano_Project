@@ -1,6 +1,6 @@
 .container {
     width: 90%; 
-    height: 100px; 
+    height: auto; 
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -18,10 +18,11 @@
     justify-content: center;
 }
 .main {
-    width: inherit;
+    width: 35%;
     height: auto;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 #top-text{
@@ -68,5 +69,8 @@
     }
     .main{
         margin-top: 50px;
+    }
+    #top-text{
+        margin-top: 5%;
     }
 }
