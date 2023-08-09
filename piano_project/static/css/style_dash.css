@@ -24,7 +24,7 @@
     flex-direction: column;
 }
 #top-text{
-    margin-top: 100px;
+    margin-top: 5%;
 }
 .card-box{
     display: flex;
@@ -81,8 +81,7 @@
     .nav-link {
         padding: 0.5 rem 1rem; /* Add padding for touch-friendly areas */
     }
-    /* .main{
-        margin-top: 40px;
-        max-width: 100%;
-    } */
+    #top-text{
+        margin-top: 10%;
+    }
 }
