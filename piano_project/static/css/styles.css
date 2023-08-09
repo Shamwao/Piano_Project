@@ -116,16 +116,17 @@
 }
 #dog {
     height: auto;
-    width: 90%; 
+    width: 60%; 
 }
 #surpriseddog{
     height: auto;
-    width: 90%;
-    margin-left: 50px;
+    width: 60%;
+    margin-left: 10%;
+    margin-bottom: 55%;
 }
 #safety-pin{
-    height: 40px;
-    width: 40px;
+    height: auto;
+    width: 20%;
     visibility: hidden; 
 }
 #car{
