@@ -101,6 +101,7 @@ $(document).ready(function() {
         $('#safety-pin').css('visibility', 'visible')
         $('#bottom-text').html('Click your answer to find out!')
         dog.attr('src', confusedImageSrc);
+        $('#D4').off('click')
     });
 });
 
