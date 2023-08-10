@@ -88,9 +88,9 @@
     margin-top: 3%;
 }
 .icons{
-    height: 45%;
+    height: 55%;
     display: flex;
-    margin-bottom: 25%;
+    margin-bottom: 10%;
     flex: 1;
     flex-direction: column;
     align-items: center;
@@ -108,15 +108,16 @@
 }
 #doghouse{
     position: absolute;
-    width: 9%;
+    width: 7%;
 }
 #bungalow{
     position: absolute;
-    width: 14%;
+    width: 11%;
 }
 #dog {
     height: auto;
-    width: 60%; 
+    width: 50%; 
+    margin-top: 15%;
 }
 #surpriseddog{
     height: auto;
