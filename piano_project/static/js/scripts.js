@@ -1,19 +1,11 @@
-//highlighter
-$(document).ready(function(){
-    $('.white-keys').mouseenter(function(){
-        $(this).css('background-color', 'red')
-    })
-    $('.white-keys').mouseleave(function(){
-        $(this).css('background-color', 'white')
-    })
-})
-$(document).ready(function(){
-    $('.black-keys').mouseenter(function(){
-        $(this).css('background-color', 'red')
-    })
-    $('.black-keys').mouseleave(function(){
-        $(this).css('background-color', 'black')
-    })
-})
+flatpickr('#date', {
+    "minDate": "today"
+});
 
-
+flatpickr('#time', {
+    "enableTime": true,
+    "noCalendar":true,
+    dateFormat: "H:i",
+    minTime: "12:00",
+    maxTime: "20:30",
+});
