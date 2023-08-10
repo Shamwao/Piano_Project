@@ -116,7 +116,7 @@ $(document).ready(function(){
             $('#surpriseddog').removeAttr('hidden')
             $('#safety-pin').removeAttr('hidden')
             $('#btn-next').removeAttr('hidden')
-            $('.blackkey').off('click')
+            $('.black-keys').off('click')
         } else if($(this).attr('id') == 'Bb4' && $(this).children().length){
             console.log('Right answer again')
             $('#top-text').text('Correct again!')
