@@ -40,14 +40,16 @@
             </nav>
         </div>
         <div class="field d-flex justify-content-center">
-            <div class="main-box">
-                <h1 class="text-center" id="top-text">Schedule a lesson! </h1>
-                <form action="create_lesson" method="post">
-                    {% csrf_token%}
-                    <input type="date" name ='date'>
-                    <input type="time" name='time'>
-                    <input type="submit" value="Schedule" class="btn btn-success">
-                </form>
+            <div class="main">
+                <div class="schedule">
+                    <h1 class="text-center" id="top-text">Schedule a lesson! </h1>
+                    <form action="create_lesson" method="post">
+                        {% csrf_token%}
+                        <input type="date" name ='date'>
+                        <input type="time" name='time'>
+                        <input type="submit" value="Schedule" class="btn btn-success">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
