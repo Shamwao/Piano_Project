@@ -53,6 +53,11 @@
     margin-top: 10px;
 }
 /* Media Query for Mobile Devices */
+@media (max-width: 600px){
+    .container{
+        margin-bottom: 15%;
+    }
+}
 @media (max-width: 767px) {
     .navbar {
         height: auto; 
@@ -85,6 +90,44 @@
         padding: 0.5 rem 1rem; /* Add padding for touch-friendly areas */
     }
     #top-text{
+        margin-top: 17%;
+    }
+    .schedule{
+        margin-top: 45%;
+    } 
+}  
+@media (max-width:1200px) {
+    .navbar {
+        height: auto; 
+        background-color: #8CDEEB; /* Add the background color for the navbar */
+    }
+    
+    .navbar-brand {
+        width: 100%; /* Make the brand/logo fill the width */
+        height: 7%;
+        text-align: center; /* Center the brand/logo */
+    }
+    
+    .navbar-toggler {
+        margin-left: auto; /* Move the toggler to the right side */
+    }
+    
+    .collapse.navbar-collapse {
+        position: static; /* Remove the absolute position to allow normal flow */
+        background-color: transparent; /* Make the background transparent */
+        width: 100%; /* Make the collapsed menu full width */
+        text-align: center; /* Center the menu items */
+    }
+    
+    .navbar-nav {
+        flex-direction: column; /* Stack the menu items vertically */
+        align-items: center; /* Center align the menu items */
+    }
+    
+    .nav-link {
+        padding: 0.5 rem 1rem; /* Add padding for touch-friendly areas */
+    }
+    #top-text {
         margin-top: 10%;
     }
 }

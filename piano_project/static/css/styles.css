@@ -183,3 +183,12 @@
         height: 20%
     }
 }
+@media (max-width: 1200px){
+    .navbar{
+        height: auto;
+    }
+    #top-text{
+        margin-top: 18%;
+    }
+
+}
