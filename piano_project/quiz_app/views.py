@@ -21,23 +21,21 @@ def post_score(request):
         user_id = request.POST.get('user_id')
         final_score = int(request.POST.get('finalScore'))
 
-        # Retrieve the existing score from the database
+        # Retrieve the existing quiz
         try:
             quiz = Quiz.objects.get(name=quizname, user_id=user_id)
-            existing_score = quiz.score
         except Quiz.DoesNotExist:
-            existing_score = 0 
+            quiz = None
 
-        # Only update the score if the new score is higher
-        if final_score > existing_score:
-            Quiz.objects.update_or_create(
-                name=quizname,
-                user_id=user_id,
-                defaults={
-                    'name': request.POST.get('name'),
-                    'score': final_score,
-                    'passed': True if request.POST.get('passed') == 'true' else False,
-                    'user_id': user_id,
-                },
-            )
+        # Update or create the quiz with the new score
+        if not quiz or final_score > quiz.score:
+            defaults = {
+                'name': request.POST.get('name'),
+                'score': final_score,
+                'passed': request.POST.get('passed') == 'true',
+                'user_id': user_id,
+            }
+            
+            Quiz.objects.update_or_create(name=quizname, user_id=user_id, defaults=defaults)
+
         return redirect('/profile')

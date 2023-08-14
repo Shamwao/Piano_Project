@@ -70,7 +70,9 @@
                         {% for quiz in quizzes %}
                         <td>{{quiz.name}}</td>
                         <td>{{quiz.score}} </td>
-                        <td><img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot" hidden></td>
+                        <td>{% if quiz.passed%}
+                                <img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot"></td>
+                            {% endif %}
                     </tr>
                         {%endfor%}
                 </table>
