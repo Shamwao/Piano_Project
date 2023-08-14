@@ -16,16 +16,28 @@ def bkeys(request):
     return render (request, "bkey_quiz.html", context)
 
 def post_score(request):
-    quizname = request.POST.get('name')
     if request.method == 'POST':
-        Quiz.objects.update_or_create(
-            name = quizname,
-            user_id=request.POST.get('user_id'),
-            defaults={
-                'name':request.POST.get('name'),
-                'score':request.POST.get('finalScore'), 
-                'passed':True if request.POST.get('passed')=='true' else False, 
-                'user_id':request.POST.get('user_id'),
+        quizname = request.POST.get('name')
+        user_id = request.POST.get('user_id')
+        final_score = int(request.POST.get('finalScore'))
+
+        # Retrieve the existing score from the database
+        try:
+            quiz = Quiz.objects.get(name=quizname, user_id=user_id)
+            existing_score = quiz.score
+        except Quiz.DoesNotExist:
+            existing_score = 0 
+
+        # Only update the score if the new score is higher
+        if final_score > existing_score:
+            Quiz.objects.update_or_create(
+                name=quizname,
+                user_id=user_id,
+                defaults={
+                    'name': request.POST.get('name'),
+                    'score': final_score,
+                    'passed': True if request.POST.get('passed') == 'true' else False,
+                    'user_id': user_id,
                 },
             )
         return redirect('/profile')
