@@ -44,6 +44,23 @@
     <div class="field d-flex justify-content-center"> 
         <div class="main">   
             <h1 class="text-center mb-3" id="top-text">{{ user.first_name }}'s Profile</h1>
+            <table class="table table-info table-bordered caption-top">
+                <caption>Quiz Results</caption>
+                <tr>
+                    <th>Quiz</th>
+                    <th>Score</th>
+                    <th>Passed</th>
+                </tr>
+                <tr>
+                    {% for quiz in quizzes %}
+                    <td>{{quiz.name}}</td>
+                    <td>{{quiz.score}} </td>
+                    <td>{% if quiz.passed%}
+                            <img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot"></td>
+                        {% endif %}
+                </tr>
+                    {%endfor%}
+            </table>
                 <table class="table table-success table-bordered caption-top">
                     <caption>Lessons Scheduled</caption>
                     <tr>
@@ -58,23 +75,6 @@
                         <td> <a href="update/{{lesson.id}}">Update</a> <a href="delete/{{lesson.id}}">Delete</a></td>
                     </tr>
                         {% endfor %}
-                </table>
-                <table class="table table-info table-bordered caption-top">
-                    <caption>Quiz Results</caption>
-                    <tr>
-                        <th>Quiz</th>
-                        <th>Score</th>
-                        <th>Passed</th>
-                    </tr>
-                    <tr>
-                        {% for quiz in quizzes %}
-                        <td>{{quiz.name}}</td>
-                        <td>{{quiz.score}} </td>
-                        <td>{% if quiz.passed%}
-                                <img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot"></td>
-                            {% endif %}
-                    </tr>
-                        {%endfor%}
                 </table>
             </div>
     </div>
