@@ -10,17 +10,17 @@ class UserManager(models.Manager):
         errors = {}
         emailCheck = self.filter(email=form['email'])
         if emailCheck:
-            errors['email'] = 'That email is already in use'
+            errors['email'] = 'That email is already in use.'
         if len(form['first_name']) < 3 :
-            errors["first_name"] = "Enter first name"
+            errors["first_name"] = "Please enter a valid first name."
         if len(form['last_name']) < 3 :
-            errors["last_name"] = "Enter last name"
+            errors["last_name"] = "Please enter a valid last name."
         if len(form['password']) < 8 :
-            errors["password"] = 'Password must be at least 8 characters'
+            errors["password"] = 'Password must be at least 8 characters.'
         if not EMAIL_REGEX.match(form['email']):
-            errors["email"] = "Enter valid email address"
-        if form['password'] != form ['confirm'] :
-            errors['confirm'] = "Passwords don't match"
+            errors["email"] = "Please enter a valid email address."
+        if form['password'] != form['confirm'] :
+            errors['confirm'] = "Passwords don't match. Please try again."
         
         return errors
 

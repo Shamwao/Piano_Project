@@ -10,14 +10,17 @@ import bcrypt
 def index(request):
     return render(request, "index.html")
 
+def register(request):
+    return render(request, "register.html")
+
 def create_user(request):
     if request.method == 'GET':
-        return redirect('/')
+        return redirect('/register')
     errors = User.objects.validator(request.POST)
     if errors:
-        for value in errors.values():
-            messages.error(request, value)
-        return redirect('/')
+        for field, value in errors.items():
+            messages.error(request, value, extra_tags=field)
+        return redirect('/register')
     hashedPw = bcrypt.hashpw(request.POST['password'].encode(), bcrypt.gensalt()).decode()
     new_user = User.objects.create(
             first_name = request.POST.get('first_name'),
