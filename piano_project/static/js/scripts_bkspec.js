@@ -50,7 +50,7 @@ $(document).ready(function(){
                     sustain: 0.3,
                     release: 1
                 },
-                volume: -2 // Adjust the volume (if needed)
+                volume: -2 // Adjust the volume
             }).toDestination();
             polySynth.triggerAttackRelease(frequency, "8n");
         } catch (error) {
@@ -125,6 +125,8 @@ $(document).ready(function(){
             $('#flat-tire').removeAttr('hidden')
             $('#car').css('visibility', 'hidden')
             $('#btn-next').removeAttr('hidden')
+            $('.black-keys').off('click')
+        } else if (!$('#answerText[hidden]').length) {
             $('.black-keys').off('click')
         }else {
             console.log('Wrong answer')
