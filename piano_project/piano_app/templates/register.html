@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{%static 'css/style_i' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <title>Welcome to Piano Parrot!</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2 class="text-center text-dark mt-5">Register to begin your learning journey. It's Free!</h2>
+                <div class="card my-5">
+                    <form action ="create_user" method="post" class="card-body cardbody-color p-lg-5">
+                        <div class="text-center">
+                            <img src="{%static 'img/Piano-Parrot_Final-RGB.png'%}" class="img-fluid profile-image-pic my-3" alt="profile">
+                        </div>
+                        {% csrf_token %}
+                        <input type="text" class="form-control mt-3" name ="first_name" id="first_name" placeholder="First Name">
+                        {% for message in messages %}
+                            {% if "first_name" in message.tags %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <input type="text" class="form-control mt-3" name="last_name" id="last_name" placeholder="Last Name">
+                        {% for message in messages %}
+                            {% if "last_name" in message.tags %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <input type="email" class="form-control mt-3" name="email" id="email"placeholder="Email Address">
+                        {% for message in messages %}
+                            {% if "email" in message.tags %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <input type="password" class="form-control mt-3" name="password" id="password"placeholder="Password">
+                        {% for message in messages %}
+                            {% if "password" in message.tags %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <input type="password" class="form-control mt-3" name="confirm" id="confirm"placeholder="Confirm Password">
+                        {% for message in messages %}
+                            {% if "confirm" in message.tags %}
+                                <p class="text-danger">{{ message }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        <input type="submit" value="Register" class="btn btn-success mt-3">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
