@@ -12,7 +12,7 @@
 <body>
     <div class="container">
         <div class="top">
-            <nav class="navbar fixed-top navbar-expand-lg" style="background-color:#8CDEEB" >
+            <nav class="navbar fixed-top navbar-expand-lg">
                 <a class="navbar-brand" href="/dashboard">
                     <img src="{%static 'img\Piano-Parrot_Final-RGB.png' %}" class='logo ms-5' width="320" height="100" alt="">
                 </a>
@@ -50,13 +50,19 @@
                     <div class="card-body">
                         <h5 class="card-title">White Keys</h5>
                         <p class="card-text">Test your knowledge! Can you name each white key?</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="/tutorial/keys">Tutorial</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
                     <a href="/quiz/bkeys"><img src="/static/img/blackkeys.png" class="card-img-top" alt="blackkeys" id="blackkeys"></a>
                     <div class="card-body">
                         <h5 class="card-title">Black Keys</h5>
-                        <p class="card-text">A bit more of a challenge, but master this and you'll know all the key names!</p>
+                        <p class="card-text">A bit more of a challenge, but master this and you'll know every key!</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="/tutorial/bkeys">Tutorial</a></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="card">
