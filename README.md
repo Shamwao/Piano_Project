@@ -35,6 +35,8 @@ Medium:
 
 -Additional tutorials/quizzes (intervals, scales (major, minor, blues, pentatonic), arpeggios...)
 
+-Page for simply playing piano
+
 Small:
 
 -Deploy to a real URL
