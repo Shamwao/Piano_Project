@@ -102,38 +102,40 @@ $(document).ready(function() {
         $('#bottom-text').html('Click your answer to find out!')
         dog.attr('src', confusedImageSrc);
         $('#D4').off('click')
+        bkeyTrigger()
     });
 });
 
 //bkey trigger
 //click on Eb to trigger next event
-$(document).ready(function(){
-    $('.black-keys').click(function(){
-        if ($(this).attr('id') =='Eb4' && $(this).children().length){
-            console.log('Right answer')
-            $('#top-text').text('Correct!*No dogs were harmed in the making of this tutorial*')
-            $('#bottom-text').html('The name of this black key is <strong>D Sharp</strong> or D#. In music, sharp (#) means a little higher.')
-            $('#dog').css('visibility', 'hidden')
-            $('#surpriseddog').removeAttr('hidden')
-            $('#safety-pin').removeAttr('hidden')
-            $('#btn-next').removeAttr('hidden')
-            $('.black-keys').off('click')
-        } else if($(this).attr('id') == 'Bb4' && $(this).children().length){
-            console.log('Right answer again')
-            $('#top-text').text('Correct again!')
-            $('#bottom-text').html('The name of this black key is <strong>B Flat</strong> or B♭. Similar to sharp, flat (♭) means a little lower.')
-            $('#flat-tire').removeAttr('hidden')
-            $('#car').css('visibility', 'hidden')
-            $('#btn-next').removeAttr('hidden')
-            $('.black-keys').off('click')
-        } else if (!$('#answerText[hidden]').length) {
-            $('.black-keys').off('click')
-        }else {
-            console.log('Wrong answer')
-            $('#top-text').text('Nope. Try a different black key')
-            $('#bottom-text').text('')
-            $(this).off('click')
-        }
+function bkeyTrigger(){
+    $(document).ready(function(){
+        $('.black-keys').click(function(){
+            if ($(this).attr('id') =='Eb4' && $(this).children().length){
+                console.log('Right answer')
+                $('#top-text').text('Correct!*No dogs were harmed in the making of this tutorial*')
+                $('#bottom-text').html('The name of this black key is <strong>D Sharp</strong> or D#. In music, sharp (#) means a little higher.')
+                $('#dog').css('visibility', 'hidden')
+                $('#surpriseddog').removeAttr('hidden')
+                $('#safety-pin').removeAttr('hidden')
+                $('#btn-next').removeAttr('hidden')
+                $('.black-keys').off('click')
+            } else if($(this).attr('id') == 'Bb4' && $(this).children().length){
+                console.log('Right answer again')
+                $('#top-text').text('Correct again!')
+                $('#bottom-text').html('The name of this black key is <strong>B Flat</strong> or B♭. Similar to sharp, flat (♭) means a little lower.')
+                $('#flat-tire').removeAttr('hidden')
+                $('#car').css('visibility', 'hidden')
+                $('#btn-next').removeAttr('hidden')
+                $('.black-keys').off('click')
+            } else if (!$('#answerText[hidden]').length) {
+                $('.black-keys').off('click')
+            }else {
+                console.log('Wrong answer')
+                $('#top-text').text('Nope. Try a different black key')
+                $('#bottom-text').text('')
+                $(this).off('click')
+            }
+        })
     })
-})
-
+}
