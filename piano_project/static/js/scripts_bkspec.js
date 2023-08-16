@@ -95,18 +95,24 @@ $(document).ready(function(){
 $(document).ready(function() {
     var dog = $('#dog');
     var confusedImageSrc ="/static/img/confused.png";
-
-    $('#D4').on('click', function() {
-        $('#top-text').html("Great! Now...imagine he were to *hypothetically* sit on something <strong>sharp</strong>...<br> He'd jump up high in the air, right? Which black key do you think he'd land on?");
-        $('#safety-pin').css('visibility', 'visible')
-        $('#bottom-text').html('Click your answer to find out!')
-        dog.attr('src', confusedImageSrc);
-        $('#D4').off('click')
-        bkeyTrigger()
-    });
+    if($('#D4').children().length){
+        $('#D4').on('click', function() {
+            $('#top-text').html("Great! Now...imagine he were to *hypothetically* sit on something <strong>sharp</strong>...<br> He'd jump up high in the air, right? Which black key do you think he'd land on?");
+            $('#safety-pin').css('visibility', 'visible')
+            $('#bottom-text').html('Click your answer to find out!')
+            dog.attr('src', confusedImageSrc);
+            $('#D4').off('click')
+            bkeyTrigger()
+        });
+    } else if ($('#B4').children().length){
+        $('#B4').on('click', function(){
+            $('#top-text').html("Suppose its tire were to go <strong>flat</strong> and made it fall <strong>down</strong>")
+            $('#bottom-text').html('Click on the black key where it should land')
+            bkeyTrigger()
+        })
+    }
 });
 
-//bkey trigger
 //click on Eb to trigger next event
 function bkeyTrigger(){
     $(document).ready(function(){
@@ -124,11 +130,12 @@ function bkeyTrigger(){
                 console.log('Right answer again')
                 $('#top-text').text('Correct again!')
                 $('#bottom-text').html('The name of this black key is <strong>B Flat</strong> or B♭. Similar to sharp, flat (♭) means a little lower.')
-                $('#flat-tire').removeAttr('hidden')
+                $('#flat-tire').css('visibility','visible')
                 $('#car').css('visibility', 'hidden')
                 $('#btn-next').removeAttr('hidden')
                 $('.black-keys').off('click')
-            } else if (!$('#answerText[hidden]').length) {
+            } else if (!$('.black-keys').children().length) {
+                console.log('No kids here!')
                 $('.black-keys').off('click')
             }else {
                 console.log('Wrong answer')

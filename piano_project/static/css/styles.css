@@ -139,6 +139,7 @@
 #flat-tire{
     height: auto;
     width: 90%;
+    visibility: hidden;
 }
 /* Media Query for Mobile Devices */
 @media (max-width: 400px) {
