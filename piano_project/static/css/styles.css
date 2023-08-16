@@ -134,13 +134,33 @@
 #car{
     height: auto;
     width: 90%;
-    margin-bottom: 60px;
+    margin-bottom: 6%;
 }
 #flat-tire{
     height: auto;
     width: 90%;
 }
 /* Media Query for Mobile Devices */
+@media (max-width: 400px) {
+    #doghouse{
+        height: auto;
+        width: 20%
+    }
+    #bungalow{
+        height: auto;
+        width: 40%;
+    }
+    #dog{
+        height: auto;
+        width: 100%
+    }
+    #surpriseddog{
+        height: auto;
+        width: 100%;
+        margin-bottom: 107%;
+    }
+}
+
 @media (max-width: 767px) {
     .navbar {
         height: auto; /* Allow the navbar to adjust its height based on content */
@@ -180,8 +200,25 @@
     #top-text{
         margin-top: 10%;
     }
+    #doghouse{
+        height: auto;
+        width: 14%
+    }
+    #bungalow{
+        height: auto;
+        width: 25%;
+    }
     #dog{
-        height: 20%
+        height: auto;
+        width: 80%;
+    }
+    #surpriseddog{
+        height: auto;
+        width: 80%;
+        margin-bottom: 140%;
+    }
+    #car{
+        margin-bottom: 200%;
     }
 }
 @media (max-width: 1200px){
@@ -190,6 +227,14 @@
     }
     #top-text{
         margin-top: 18%;
+    }
+    #doghouse{
+        height: 16%;
+        width: 8%
+    }
+    #bungalow{
+        height: auto;
+        width: 15%;
     }
 
 }
