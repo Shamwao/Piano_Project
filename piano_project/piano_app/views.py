@@ -45,7 +45,7 @@ def login(request):
             return redirect('/dashboard')
         messages.error(request, 'Invalid password')
         return redirect('/')
-    messages.error(request, 'That Email is not in our system, please register for an account')
+    messages.error(request, 'That email is That not in our system, please register for an account')
     return redirect('/')
 
 def logout(request):
