@@ -21,15 +21,15 @@
                             <img src="{%static 'img/Piano-Parrot_Final-RGB.png'%}" class="img-fluid profile-image-pic my-3" alt="profile">
                         </div>
                         {% csrf_token%}
-                        <div class="mb-3"><input type="email" name="email" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Email Address"></div>
+                        <div class="mb-2"><input type="email" name="email" class="form-control" id="Username" aria-describedby="emailHelp" placeholder="Email Address"></div>
                         {% for message in messages %}
-                            {% if "That email is That not in our system, please register for an account" in message.tags %}
+                            {% if "email" in message.tags %}
                                 <p class="text-danger">{{ message }}</p>
                             {% endif %}
                         {% endfor %}
-                        <div class="mb-3"><input type="password" name="password"class="form-control" id="password" placeholder="Password"></div>
+                        <div class="mb-2"><input type="password" name="password"class="form-control" id="password" placeholder="Password"></div>
                         {% for message in messages %}
-                            {% if "Invalid password" in message.tags %}
+                            {% if "password" in message.tags %}
                                 <p class="text-danger">{{ message }}</p>
                             {% endif %}
                         {% endfor %}

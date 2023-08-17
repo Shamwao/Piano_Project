@@ -40,13 +40,15 @@ def login(request):
     user = User.objects.filter(email = request.POST['email'])
     if user:
         userLogin = user[0]
-        if bcrypt.checkpw(request.POST['password'].encode(), userLogin.password.encode()):
-            request.session['user_id'] = userLogin.id
-            return redirect('/dashboard')
-        messages.error(request, 'Invalid password')
+    else:
+        messages.error(request, "That email is not in our system, please register for an account", extra_tags="email")
         return redirect('/')
-    messages.error(request, 'That email is That not in our system, please register for an account')
-    return redirect('/')
+    if bcrypt.checkpw(request.POST['password'].encode(), userLogin.password.encode()):
+        request.session['user_id'] = userLogin.id
+        return redirect('/dashboard')
+    else:
+        messages.error(request, "Invalid password", extra_tags="password")
+        return redirect('/')
 
 def logout(request):
     request.session.clear()
