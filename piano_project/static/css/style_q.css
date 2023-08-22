@@ -17,6 +17,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.nav-item{
+    font-size: 1.2em;
+}
 .main {
     flex:1;
 }

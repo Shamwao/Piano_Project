@@ -18,6 +18,9 @@
     display: flex;
     justify-content: center;
 }
+.nav-item{
+    font-size: 1.2em;
+}
 .main {
     width: inherit;
     height: auto;
