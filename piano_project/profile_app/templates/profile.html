@@ -22,19 +22,19 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link active px-4 fs-4" aria-current="page" href="/profile">My Profile</a>
+                            <a class="nav-link active px-4 fs-5" aria-current="page" href="/profile">My Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-4 fs-4" href="/tutorial/index">Tutorials</a>
+                            <a class="nav-link active px-4 fs-5" href="/tutorial/index">Tutorials</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-4 fs-4" href="/quiz/main">Quizzes</a>
+                            <a class="nav-link active px-4 fs-5" href="/quiz/main">Quizzes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-4 fs-4" href="/lessons">Schedule a Lesson</a>
+                            <a class="nav-link active px-4 fs-5" href="/lessons">Schedule a Lesson</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active px-4 fs-4" href="/logout">Logout</a>
+                            <a class="nav-link active px-4 fs-5" href="/logout">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -99,7 +99,7 @@
                                 </thead>
                                 <tbody id="items">
                                     <tr>
-                                        {% for quiz in quizzes %}
+                                    {% for quiz in quizzes %}
                                         <td></td>
                                         <td>{{quiz.name}}</td>
                                         <td>{{quiz.score}} </td>
@@ -107,7 +107,9 @@
                                                 <img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot"></td>
                                             {% endif %}
                                     </tr>
-                                            {%endfor%}
+                                        {%empty%}
+                                        <td colspan="4">You haven't taken any <a href="/quiz/main">quizzes</a> yet.</td>
+                                    {%endfor%}
                                 </tbody>
                             </table>
                             <hr>
@@ -125,15 +127,16 @@
                                                 </tr>
                                             </thead>
                                             <tbody id="items">
-                                                <tr>
                                                     <tr>
-                                                        {% for lesson in lessons %}
+                                                    {% for lesson in lessons %}
                                                         <td></td>
                                                         <td> {{lesson.date}} </td>
                                                         <td> {{lesson.time}}</td>
                                                         <td> <a href="update/{{lesson.id}}">Reschedule</a> | <a href="delete/{{lesson.id}}">Cancel</a></td>
                                                     </tr>
-                                                        {% endfor %}
+                                                        {%empty%}
+                                                        <td colspan="4">You haven't signed up for any lessons yet. Schedule one <a href="/lessons">here!</a></td>
+                                                    {%endfor%}
                                             </tbody>
                                         </table>
                                         <hr>
