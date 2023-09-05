@@ -24,9 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 from decouple import config
 SECRET_KEY=config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['pianoparrot.eba-de2mxavf.us-west-2.elasticbeanstalk.com',
+                'www.pianoparrot.com',
+                'pianoparrot.com',
                 'localhost'
                 ]
 
@@ -45,7 +47,6 @@ INSTALLED_APPS = [
     'quiz_app',
     'profile_app',
     'lessons_app',
-    'play_app'
 ]
 
 MIDDLEWARE = [
