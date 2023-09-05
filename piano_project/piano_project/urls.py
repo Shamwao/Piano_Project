@@ -25,7 +25,6 @@ urlpatterns = [
     path('tutorial/', include('tutorial_app.urls')),
     path('profile/', include('profile_app.urls')),
     path('lessons/', include('lessons_app.urls')),
-    # path('play/', include('play_app.urls')),
 ] 
 if settings.DEBUG: 
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
