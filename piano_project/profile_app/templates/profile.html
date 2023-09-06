@@ -96,7 +96,7 @@
                                         <th></th>
                                         <th>Quiz</th>
                                         <th>Score</th>
-                                        <th>Passed?</th>
+                                        <th>Result</th>
                                     </tr>
                                 </thead>
                                 <tbody id="items">
@@ -107,6 +107,8 @@
                                             <td>{{quiz.score}} </td>
                                             <td>{% if quiz.passed%}
                                                     <img src="/static/img/piano-parrot-icon.jpg" alt="parrot"id="parrot"></td>
+                                                {%else%}
+                                                    <p>Keep on trying!</p>
                                                 {% endif %}
                                         </tr>
                                             {%empty%}
