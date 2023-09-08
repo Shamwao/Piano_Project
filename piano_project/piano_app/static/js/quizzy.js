@@ -78,8 +78,3 @@ function clean() {
         answerKeys[i].style.backgroundColor = 'white'
 }
 
-
-
-
-
-//quiz/scales

@@ -1,4 +1,4 @@
-//quiz/keys 
+
 
 const testKeys = ["Db","Eb","Gb","Ab","Bb"]
 const answerKeys = document.getElementsByClassName('black-keys');
@@ -73,9 +73,3 @@ function clean() {
 function hide(element){
 element.remove()
 }
-
-
-
-
-
-//quiz/scales

@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = ['pianoparrot.eba-de2mxavf.us-west-2.elasticbeanstalk.com',
                 'www.pianoparrot.com',
                 'pianoparrot.com',
+                'awseb-e-e-AWSEBLoa-12TIJLT0N917A-1640098612.us-west-2.elb.amazonaws.com',
                 'localhost'
                 ]
 
