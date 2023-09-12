@@ -12,4 +12,5 @@ urlpatterns = [
     path('bkeys/1', views.bk_tutorial1),
     path('bkeys/2', views.bk_tutorial2),
     path('bkeys/3', views.bk_tutorial3),
+    path('chords1/', views.chords1_tutorial)
 ]

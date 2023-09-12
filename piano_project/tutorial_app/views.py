@@ -31,3 +31,6 @@ def bk_tutorial2(request):
 def bk_tutorial3(request):
     return render (request, "bk_tutorial3.html")
 
+def chords1_tutorial(request):
+    return render (request, "chords1_tutorial.html")
+
