@@ -145,26 +145,23 @@
     visibility: hidden;
 }
 /* Media Query for Mobile Devices */
-@media (max-width: 400px) {
+@media (max-width: 1200px){
+    .navbar{
+        height: auto;
+    }
+    #top-text{
+        margin-top: 18%;
+    }
     #doghouse{
         height: auto;
-        width: 20%
+        width: 8%
     }
     #bungalow{
         height: auto;
-        width: 40%;
+        width: 15%;
     }
-    #dog{
-        height: auto;
-        width: 100%
-    }
-    #surpriseddog{
-        height: auto;
-        width: 100%;
-        margin-bottom: 107%;
-    }
-}
 
+}
 @media (max-width: 767px) {
     .navbar {
         height: auto; /* Allow the navbar to adjust its height based on content */
@@ -202,7 +199,7 @@
         max-width: 100%;
     }
     #top-text{
-        margin-top: 10%;
+        margin-top: 12%;
     }
     #doghouse{
         height: auto;
@@ -225,20 +222,26 @@
         margin-bottom: 200%;
     }
 }
-@media (max-width: 1200px){
-    .navbar{
-        height: auto;
-    }
+@media (max-width: 400px) {
     #top-text{
-        margin-top: 18%;
+        margin-top: 20%;
     }
     #doghouse{
-        height: 16%;
-        width: 8%
+        height: auto;
+        width: 12%;
     }
     #bungalow{
         height: auto;
-        width: 15%;
+        width: 30%;
     }
-
+    #dog{
+        height: auto;
+        width: 100%
+    }
+    #surpriseddog{
+        height: auto;
+        width: 100%;
+        margin-bottom: 107%;
+    }
 }
+
